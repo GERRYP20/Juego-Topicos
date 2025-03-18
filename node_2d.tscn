@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cueg2a40xa75l"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="fondo" type="Label" parent="."]
+offset_right = 845.0
+offset_bottom = 463.0
+text = "hola
+"
