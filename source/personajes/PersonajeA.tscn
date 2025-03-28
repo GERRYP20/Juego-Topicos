@@ -1,0 +1,101 @@
+[gd_scene load_steps=15 format=3 uid="uid://borr7kphqespa"]
+
+[ext_resource type="Script" path="res://source/personajes/personaje_a.gd" id="1_ny2t0"]
+[ext_resource type="Texture2D" uid="uid://j2yikfakead1" path="res://resources/imagenes/New Piskel (16).png" id="2_au5gn"]
+[ext_resource type="Texture2D" uid="uid://b8saymw1uxrsc" path="res://resources/imagenes/perro caminando a la derecha.png" id="3_dpwyb"]
+[ext_resource type="Texture2D" uid="uid://dsecci0jvdx2v" path="res://resources/imagenes/perro caminando a la izquierda.png" id="4_hevvc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ss30c"]
+atlas = ExtResource("2_au5gn")
+region = Rect2(0, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8oaq6"]
+atlas = ExtResource("2_au5gn")
+region = Rect2(320, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_36pw8"]
+atlas = ExtResource("2_au5gn")
+region = Rect2(640, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pcp1v"]
+atlas = ExtResource("3_dpwyb")
+region = Rect2(0, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0jmj5"]
+atlas = ExtResource("3_dpwyb")
+region = Rect2(320, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h2xij"]
+atlas = ExtResource("3_dpwyb")
+region = Rect2(640, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ln2w0"]
+atlas = ExtResource("4_hevvc")
+region = Rect2(0, 0, 448, 448)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qeqo"]
+atlas = ExtResource("4_hevvc")
+region = Rect2(448, 0, 448, 448)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ut15f"]
+atlas = ExtResource("4_hevvc")
+region = Rect2(896, 0, 448, 448)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_70224"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"caminar_abajo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ss30c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8oaq6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_36pw8")
+}],
+"loop": true,
+"name": &"caminar_arriba",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pcp1v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0jmj5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h2xij")
+}],
+"loop": true,
+"name": &"caminar_derecha",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ln2w0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0qeqo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ut15f")
+}],
+"loop": true,
+"name": &"caminar_izquierda",
+"speed": 5.0
+}]
+
+[node name="PersonajeA" type="Node2D"]
+script = ExtResource("1_ny2t0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(83.25, 67.75)
+scale = Vector2(0.223438, 0.232813)
+sprite_frames = SubResource("SpriteFrames_70224")
+animation = &"caminar_abajo"
