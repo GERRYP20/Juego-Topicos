@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://beoebpsjw6dje"]
 
-[ext_resource type="Script" path="res://source/singletone/transicion_de_escena.gd" id="1_lvsva"]
+[ext_resource type="Script" uid="uid://768xo8ngw7gu" path="res://source/singletone/transicion_de_escena.gd" id="1_lvsva"]
 
 [sub_resource type="Animation" id="Animation_8sdu7"]
 length = 1.5
@@ -35,8 +35,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1eeeg"]
 _data = {
-"RESET": SubResource("Animation_8sdu7"),
-"efecto": SubResource("Animation_1g7m0")
+&"RESET": SubResource("Animation_8sdu7"),
+&"efecto": SubResource("Animation_1g7m0")
 }
 
 [node name="TransicionDeEscena" type="CanvasLayer"]

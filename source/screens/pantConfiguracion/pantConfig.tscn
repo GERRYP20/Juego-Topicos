@@ -1,6 +1,28 @@
-[gd_scene load_steps=2 format=3 uid="uid://b75bdvywq616u"]
+[gd_scene load_steps=4 format=3 uid="uid://b75bdvywq616u"]
 
-[ext_resource type="Script" path="res://source/screens/pantConfiguracion/pant_config.gd" id="1_b6voc"]
+[ext_resource type="Script" uid="uid://f4cdskxijhr1" path="res://source/screens/pantConfiguracion/pant_config.gd" id="1_b6voc"]
+[ext_resource type="PackedScene" uid="uid://bfaclosrqprfa" path="res://source/componentes/Btn_a_menu_principal.tscn" id="2_ta2h8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rfh70"]
+font_size = 32
 
 [node name="PantConfig" type="Node2D"]
 script = ExtResource("1_b6voc")
+
+[node name="BtnAMenuPrincipal" parent="." instance=ExtResource("2_ta2h8")]
+
+[node name="Button" type="Button" parent="."]
+offset_left = 483.0
+offset_top = 269.0
+offset_right = 666.0
+offset_bottom = 298.0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 439.0
+offset_top = 101.0
+offset_right = 705.0
+offset_bottom = 146.0
+text = "CONFIGURACIÓN"
+label_settings = SubResource("LabelSettings_rfh70")
+horizontal_alignment = 1
+vertical_alignment = 1

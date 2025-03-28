@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cest3gxpb5w6c"]
 
-[ext_resource type="Script" path="res://source/screens/pantJuego/pant_juego.gd" id="1_gga42"]
+[ext_resource type="Script" uid="uid://fcfch2rj60vx" path="res://source/screens/pantJuego/pant_juego.gd" id="1_gga42"]
 [ext_resource type="Texture2D" uid="uid://dgpn75es8j2u5" path="res://resources/imagenes/sprite_terreno.png" id="2_llws5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oxqfu"]
