@@ -1,14 +1,16 @@
 '''
-efecto visual de cambiar de escena
+	Nodo que ayuda con la transición de escenas pero con animación entre ellas.
 '''
+
 extends CanvasLayer
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	layer=-5
+func _ready() -> void:
+	layer = -5
+	print_tree()
+	
 
 func cambia_escena(path:String):
-	layer=1
+	layer = 1
 	$ANPFade.play("fade_in")
 	await($ANPFade.animation_finished)
 	get_tree().change_scene_to_file(path)

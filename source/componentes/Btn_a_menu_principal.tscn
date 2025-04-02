@@ -1,13 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://bfaclosrqprfa"]
+[gd_scene load_steps=3 format=3 uid="uid://bfaclosrqprfa"]
 
 [ext_resource type="Script" uid="uid://bmvgi6uqjfgm2" path="res://source/componentes/btn_a_menu_principal.gd" id="1_s3m7s"]
+[ext_resource type="Theme" uid="uid://dxkl17rvghnqm" path="res://resources/themes/informal_theme.tres" id="1_un5kk"]
 
 [node name="BtnAMenuPrincipal" type="Button"]
-offset_left = 1005.0
-offset_top = 575.0
+offset_left = 913.0
+offset_top = 564.0
 offset_right = 1076.0
 offset_bottom = 609.0
-text = "MENU P"
+theme = ExtResource("1_un5kk")
+text = "MENÚ PRINCIPAL"
 script = ExtResource("1_s3m7s")
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]

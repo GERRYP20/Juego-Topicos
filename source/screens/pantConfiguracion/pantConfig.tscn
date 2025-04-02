@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://b75bdvywq616u"]
+[gd_scene load_steps=6 format=3 uid="uid://b75bdvywq616u"]
 
 [ext_resource type="Script" uid="uid://f4cdskxijhr1" path="res://source/screens/pantConfiguracion/pant_config.gd" id="1_b6voc"]
 [ext_resource type="PackedScene" uid="uid://bfaclosrqprfa" path="res://source/componentes/Btn_a_menu_principal.tscn" id="2_ta2h8"]
+[ext_resource type="FontFile" uid="uid://b2sjoc032quef" path="res://resources/fonts/Chelsea_Market/ChelseaMarket-Regular.ttf" id="3_rfh70"]
+[ext_resource type="Theme" uid="uid://dxkl17rvghnqm" path="res://resources/themes/informal_theme.tres" id="4_30887"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_rfh70"]
 font_size = 32
@@ -9,20 +11,46 @@ font_size = 32
 [node name="PantConfig" type="Node2D"]
 script = ExtResource("1_b6voc")
 
-[node name="BtnAMenuPrincipal" parent="." instance=ExtResource("2_ta2h8")]
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1152.0
+offset_bottom = 647.0
 
-[node name="Button" type="Button" parent="."]
-offset_left = 483.0
+[node name="BtnAMenuPrincipal" parent="Panel" instance=ExtResource("2_ta2h8")]
+layout_mode = 0
+offset_left = 963.0
+offset_top = 573.0
+offset_right = 1122.0
+offset_bottom = 618.0
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 545.0
 offset_top = 269.0
-offset_right = 666.0
-offset_bottom = 298.0
+offset_right = 717.0
+offset_bottom = 324.0
+theme_override_fonts/font = ExtResource("3_rfh70")
+theme_override_font_sizes/font_size = 0
+text = "Español"
 
-[node name="Label" type="Label" parent="."]
-offset_left = 439.0
-offset_top = 101.0
-offset_right = 705.0
-offset_bottom = 146.0
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 398.0
+offset_top = 73.0
+offset_right = 763.0
+offset_bottom = 165.0
+theme = ExtResource("4_30887")
+theme_override_fonts/font = ExtResource("3_rfh70")
+theme_override_font_sizes/font_size = 24
 text = "CONFIGURACIÓN"
 label_settings = SubResource("LabelSettings_rfh70")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 373.0
+offset_top = 288.0
+offset_right = 496.0
+offset_bottom = 311.0
+theme = ExtResource("4_30887")
+text = "Cambiar idioma"

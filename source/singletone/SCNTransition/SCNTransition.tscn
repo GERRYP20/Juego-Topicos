@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1qj4vtf14i8r"]
+
+[ext_resource type="Script" uid="uid://dgtccerdau20x" path="res://source/singletone/SCNTransition/SCNTransition.gd" id="1_lbfw7"]
+
+[sub_resource type="Animation" id="Animation_lbfw7"]
+resource_name = "fade_in"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FadeEffect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_giwtr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FadeEffect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fmm1j"]
+_data = {
+&"RESET": SubResource("Animation_giwtr"),
+&"fade_in": SubResource("Animation_lbfw7")
+}
+
+[node name="ScnTransition" type="CanvasLayer"]
+script = ExtResource("1_lbfw7")
+
+[node name="FadeEffect" type="ColorRect" parent="."]
+offset_right = 1157.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="ANPFade" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_fmm1j")
+}

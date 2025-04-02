@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dxkl17rvghnqm"]
+
+[ext_resource type="FontFile" uid="uid://b2sjoc032quef" path="res://resources/fonts/Chelsea_Market/ChelseaMarket-Regular.ttf" id="1_471ke"]
+
+[resource]
+default_font = ExtResource("1_471ke")
+Button/colors/icon_normal_color = Color(1, 1, 1, 0)
