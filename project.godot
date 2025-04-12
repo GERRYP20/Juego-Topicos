@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 SCN_T="*res://source/singletone/SCNTransition/SCNTransition.tscn"
+CONFIG_FILE="*res://source/singletone/config.gd"
+GLOBAL="*res://source/singletone/global.tscn"
 
 [rendering]
 

@@ -17,9 +17,30 @@ offset_left = 135.0
 offset_top = 541.0
 offset_right = 1047.0
 offset_bottom = 581.0
+alignment = 1
 
-[node name="Button" type="Button" parent="HBoxContainer"]
+[node name="BtnConfig" type="Button" parent="HBoxContainer"]
 layout_mode = 2
 text = "Configuración"
 
-[connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_button_pressed"]
+[node name="BtnIniciar" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "BtnIniciar"
+
+[node name="BtnContinuar" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "BtnContinuar"
+
+[node name="BtnCreditos" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "BtnCreditos"
+
+[node name="BtnComoJugar" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "BtnComoJugar"
+
+[node name="BtnSalir" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "BtnSalir"
+
+[connection signal="pressed" from="HBoxContainer/BtnConfig" to="." method="_on_button_pressed"]
