@@ -20,6 +20,12 @@ config/icon="res://icon.svg"
 SCN_T="*res://source/singletone/SCNTransition/SCNTransition.tscn"
 CONFIG_FILE="*res://source/singletone/config.gd"
 GLOBAL="*res://source/singletone/global.tscn"
+CRC_T="*res://source/singletone/CircleTransition.tscn"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
 
 [rendering]
 

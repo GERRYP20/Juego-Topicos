@@ -7,7 +7,12 @@
 	globales del juego.
 '''
 extends Node
-
+#enumerativos
+##Markers es la indicación de cual punto de ingreso está
+##establecido al cambiar de escena dentro del juego
+##[br][color=lime]mk_game_start[/color] es la etiqueta para el mapa general
+##[br][color=lime]mk_edit_t[/color] es la etiqueta para la entrada del edificio T
+enum Markers {mk_game_start, mk_cafeteria}
 #Declaración de variables globales del juego 
 var speed:int
 var maxhealth:int
@@ -15,6 +20,13 @@ var basedamage:int
 var nutrescan:int
 var pedigree:int
 var playername:String
+
+#variables de uso en el control de escenas
+##Current_mark indica hacia qué escena se va a transicionar,
+##aplica para las transiciones entre escenas del juego, es
+##decir entre el mundo principal y los edificios.
+var current_mark= Markers.mk_game_start
+# Called when the node enters the scene tree for the first time.
 
 func _ready() -> void:
 	#Carga de idioma activo
