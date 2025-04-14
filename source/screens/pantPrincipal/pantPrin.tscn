@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://cgx0yrce7s1mp"]
+[gd_scene load_steps=5 format=3 uid="uid://cgx0yrce7s1mp"]
 
 [ext_resource type="Script" path="res://source/screens/pantPrincipal/pant_prin.gd" id="1_md2wj"]
 [ext_resource type="Texture2D" uid="uid://4r44n80tpm35" path="res://resources/imagenes/9285000.jpg" id="2_jnl8u"]
+[ext_resource type="Theme" uid="uid://dxkl17rvghnqm" path="res://resources/themes/informal_theme.tres" id="3_oc8u7"]
+[ext_resource type="FontFile" uid="uid://13fv2426xy8p" path="res://resources/fonts/Londrina_Solid/LondrinaSolid-Light.ttf" id="4_uv3dc"]
 
 [node name="PantPrin" type="Node2D"]
 script = ExtResource("1_md2wj")
@@ -17,9 +19,40 @@ offset_left = 135.0
 offset_top = 541.0
 offset_right = 1047.0
 offset_bottom = 581.0
+alignment = 1
 
-[node name="Button" type="Button" parent="HBoxContainer"]
+[node name="BtnConfig" type="Button" parent="HBoxContainer"]
 layout_mode = 2
 text = "Configuración"
 
-[connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_button_pressed"]
+[node name="BtnIniciar" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "BtnIniciar"
+
+[node name="BtnContinuar" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "BtnContinuar"
+
+[node name="BtnCreditos" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "BtnCreditos"
+
+[node name="BtnComoJugar" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "BtnComoJugar"
+
+[node name="BtnSalir" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "BtnSalir"
+
+[node name="lblTitulo" type="Label" parent="."]
+offset_left = 375.0
+offset_top = 86.0
+offset_right = 823.0
+offset_bottom = 189.0
+theme = ExtResource("3_oc8u7")
+theme_override_fonts/font = ExtResource("4_uv3dc")
+theme_override_font_sizes/font_size = 70
+text = "Rayas adventure"
+
+[connection signal="pressed" from="HBoxContainer/BtnConfig" to="." method="_on_button_pressed"]
