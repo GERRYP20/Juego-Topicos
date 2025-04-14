@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="Juego_Topicos"
-run/main_scene="uid://cgx0yrce7s1mp"
-config/features=PackedStringArray("4.4", "Mobile")
+run/main_scene="res://source/screens/pantPrincipal/pantPrin.tscn"
+config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.svg"
 
 [autoload]

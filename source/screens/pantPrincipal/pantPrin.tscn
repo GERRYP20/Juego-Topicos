@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cgx0yrce7s1mp"]
 
-[ext_resource type="Script" uid="uid://cs20b1b6wlgd2" path="res://source/screens/pantPrincipal/pant_prin.gd" id="1_md2wj"]
+[ext_resource type="Script" path="res://source/screens/pantPrincipal/pant_prin.gd" id="1_md2wj"]
 [ext_resource type="Texture2D" uid="uid://4r44n80tpm35" path="res://resources/imagenes/9285000.jpg" id="2_jnl8u"]
 
 [node name="PantPrin" type="Node2D"]
