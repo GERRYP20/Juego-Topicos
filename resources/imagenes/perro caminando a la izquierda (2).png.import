@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://j2yikfakead1"
-path="res://.godot/imported/New Piskel (16).png-6e1d018f288bc13ca07ba5416a27291a.ctex"
+uid="uid://undmwjlu85xd"
+path="res://.godot/imported/perro caminando a la izquierda (2).png-c9f42a49acc113d0076eda4d0584d648.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/imagenes/New Piskel (16).png"
-dest_files=["res://.godot/imported/New Piskel (16).png-6e1d018f288bc13ca07ba5416a27291a.ctex"]
+source_file="res://resources/imagenes/perro caminando a la izquierda (2).png"
+dest_files=["res://.godot/imported/perro caminando a la izquierda (2).png-c9f42a49acc113d0076eda4d0584d648.ctex"]
 
 [params]
 

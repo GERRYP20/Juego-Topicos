@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8saymw1uxrsc"
-path="res://.godot/imported/perro caminando a la derecha.png-b1355f18ce48386457471a922fee2cc8.ctex"
+uid="uid://npp34vvees1j"
+path="res://.godot/imported/perro caminando a la derecha (1).png-b86e734abef783c17bccb9c4fd235eb7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/imagenes/perro caminando a la derecha.png"
-dest_files=["res://.godot/imported/perro caminando a la derecha.png-b1355f18ce48386457471a922fee2cc8.ctex"]
+source_file="res://resources/imagenes/perro caminando a la derecha (1).png"
+dest_files=["res://.godot/imported/perro caminando a la derecha (1).png-b86e734abef783c17bccb9c4fd235eb7.ctex"]
 
 [params]
 

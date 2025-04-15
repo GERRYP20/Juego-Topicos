@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dd4h43y0cnur6"
-path="res://.godot/imported/perro_abajo.png-5600c4adec7aa29af180a1fcd09f378f.ctex"
+uid="uid://cgri1tb6qjxj8"
+path="res://.godot/imported/BocetoAtrasPerroFinal.png-355abcc60b254e3d81f538f92057fc56.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/imagenes/perro_abajo.png"
-dest_files=["res://.godot/imported/perro_abajo.png-5600c4adec7aa29af180a1fcd09f378f.ctex"]
+source_file="res://resources/imagenes/BocetoAtrasPerroFinal.png"
+dest_files=["res://.godot/imported/BocetoAtrasPerroFinal.png-355abcc60b254e3d81f538f92057fc56.ctex"]
 
 [params]
 
