@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cgx0yrce7s1mp"]
 
 [ext_resource type="Script" path="res://source/screens/pantPrincipal/pant_prin.gd" id="1_md2wj"]
-[ext_resource type="Texture2D" uid="uid://4r44n80tpm35" path="res://resources/imagenes/9285000.jpg" id="2_jnl8u"]
+[ext_resource type="Texture2D" uid="uid://de3eff4yumnqe" path="res://resources/imagenes/menu2.png" id="2_ryg0m"]
 [ext_resource type="Theme" uid="uid://dxkl17rvghnqm" path="res://resources/themes/informal_theme.tres" id="3_oc8u7"]
 [ext_resource type="FontFile" uid="uid://13fv2426xy8p" path="res://resources/fonts/Londrina_Solid/LondrinaSolid-Light.ttf" id="4_uv3dc"]
 
@@ -9,16 +9,18 @@
 script = ExtResource("1_md2wj")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 1149.0
-offset_bottom = 652.0
-texture = ExtResource("2_jnl8u")
+offset_left = -3.0
+offset_top = -1.0
+offset_right = 1283.0
+offset_bottom = 720.0
+texture = ExtResource("2_ryg0m")
 expand_mode = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-offset_left = 135.0
-offset_top = 541.0
-offset_right = 1047.0
-offset_bottom = 581.0
+offset_left = 158.0
+offset_top = 333.0
+offset_right = 1070.0
+offset_bottom = 373.0
 alignment = 1
 
 [node name="BtnConfig" type="Button" parent="HBoxContainer"]
@@ -46,10 +48,10 @@ layout_mode = 2
 text = "BtnSalir"
 
 [node name="lblTitulo" type="Label" parent="."]
-offset_left = 375.0
-offset_top = 86.0
-offset_right = 823.0
-offset_bottom = 189.0
+offset_left = 388.0
+offset_top = 94.0
+offset_right = 836.0
+offset_bottom = 197.0
 theme = ExtResource("3_oc8u7")
 theme_override_fonts/font = ExtResource("4_uv3dc")
 theme_override_font_sizes/font_size = 70

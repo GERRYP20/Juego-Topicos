@@ -12,15 +12,15 @@ font_size = 32
 script = ExtResource("1_b6voc")
 
 [node name="Panel" type="Panel" parent="."]
-offset_right = 1152.0
-offset_bottom = 647.0
+offset_right = 1276.0
+offset_bottom = 719.0
 
 [node name="BtnAMenuPrincipal" parent="Panel" instance=ExtResource("2_ta2h8")]
 layout_mode = 0
-offset_left = 963.0
-offset_top = 573.0
-offset_right = 1122.0
-offset_bottom = 618.0
+offset_left = 1060.0
+offset_top = 628.0
+offset_right = 1219.0
+offset_bottom = 673.0
 
 [node name="BtnCambiarIdioma" type="Button" parent="Panel"]
 layout_mode = 0
