@@ -12,8 +12,8 @@ font_size = 32
 script = ExtResource("1_b6voc")
 
 [node name="Panel" type="Panel" parent="."]
-offset_right = 1276.0
-offset_bottom = 719.0
+offset_right = 1503.0
+offset_bottom = 822.0
 
 [node name="BtnAMenuPrincipal" parent="Panel" instance=ExtResource("2_ta2h8")]
 layout_mode = 0

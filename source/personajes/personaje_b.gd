@@ -3,40 +3,36 @@ extends CharacterBody2D
 @onready var per = $PersonajeB
 var speed: int = 200
 
-func _ready():
-	per.animation = "caminar_derecha"  # Asegúrate de que 'PersonajeA' tenga la propiedad 'animation'
-
 func _process(delta):
-	var moving := false
 	var direction := Vector2.ZERO
 
-	if Input.is_action_pressed("ui_up"):
+	# Movimiento con WASD y flechas
+	if Input.is_action_pressed("move_up"):
 		direction.y -= 1
-	if Input.is_action_pressed("ui_down"):
+	if Input.is_action_pressed("move_down"):
 		direction.y += 1
-	if Input.is_action_pressed("ui_left"):
+	if Input.is_action_pressed("move_left"):
 		direction.x -= 1
-	if Input.is_action_pressed("ui_right"):
+	if Input.is_action_pressed("move_right"):
 		direction.x += 1
 
+	# Si se está moviendo
 	if direction != Vector2.ZERO:
-		moving = true
 		direction = direction.normalized()
 		per.position += direction * speed * delta
-
-		# Animaciones según dirección
-		if direction.x < 0:
-			per.play("caminar_izquierda")
-		elif direction.x > 0:
-			per.play("caminar_derecha")
-		elif direction.y < 0:
-			per.play("caminar_arriba")
-		elif direction.y > 0:
-			per.play("caminar_abajo")
+		play_animation(direction)
 	else:
 		per.stop()
-		per.frame = 1  # Opcional, si tu sprite tiene un frame estático
+		per.frame = 1  # Opcional: frame estático
 
-# Este método no se usa en tu código, pero lo mantengo por si lo necesitas más adelante.
-func _input_2_keys(k1: String, k2: String) -> bool:
-	return Input.is_action_pressed(k1) or Input.is_action_pressed(k2)
+func play_animation(direction: Vector2):
+	if abs(direction.x) > abs(direction.y):
+		if direction.x < 0:
+			per.play("caminar_izquierda")
+		else:
+			per.play("caminar_derecha")
+	else:
+		if direction.y < 0:
+			per.play("caminar_arriba")
+		else:
+			per.play("caminar_abajo")

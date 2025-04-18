@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cgx0yrce7s1mp"]
+[gd_scene load_steps=7 format=3 uid="uid://cgx0yrce7s1mp"]
 
 [ext_resource type="Script" path="res://source/screens/pantPrincipal/pant_prin.gd" id="1_md2wj"]
 [ext_resource type="Texture2D" uid="uid://de3eff4yumnqe" path="res://resources/imagenes/menu2.png" id="2_ryg0m"]
 [ext_resource type="Theme" uid="uid://dxkl17rvghnqm" path="res://resources/themes/informal_theme.tres" id="3_oc8u7"]
+[ext_resource type="Script" path="res://source/screens/pantPrincipal/btn_iniciar.gd" id="3_twynu"]
+[ext_resource type="Script" path="res://source/screens/pantPrincipal/btn_salir.gd" id="4_6dygw"]
 [ext_resource type="FontFile" uid="uid://13fv2426xy8p" path="res://resources/fonts/Londrina_Solid/LondrinaSolid-Light.ttf" id="4_uv3dc"]
 
 [node name="PantPrin" type="Node2D"]
@@ -17,10 +19,10 @@ texture = ExtResource("2_ryg0m")
 expand_mode = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-offset_left = 310.0
-offset_top = 423.0
-offset_right = 987.0
-offset_bottom = 463.0
+offset_left = 319.0
+offset_top = 594.0
+offset_right = 996.0
+offset_bottom = 634.0
 alignment = 1
 
 [node name="BtnConfig" type="Button" parent="HBoxContainer"]
@@ -30,6 +32,7 @@ text = "Configuración"
 [node name="BtnIniciar" type="Button" parent="HBoxContainer"]
 layout_mode = 2
 text = "BtnIniciar"
+script = ExtResource("3_twynu")
 
 [node name="BtnContinuar" type="Button" parent="HBoxContainer"]
 layout_mode = 2
@@ -46,15 +49,17 @@ text = "BtnComoJugar"
 [node name="BtnSalir" type="Button" parent="HBoxContainer"]
 layout_mode = 2
 text = "BtnSalir"
+script = ExtResource("4_6dygw")
 
 [node name="lblTitulo" type="Label" parent="."]
-offset_left = 420.0
-offset_top = 92.0
-offset_right = 868.0
-offset_bottom = 195.0
+offset_left = 421.0
+offset_top = 162.0
+offset_right = 890.0
+offset_bottom = 265.0
 theme = ExtResource("3_oc8u7")
 theme_override_fonts/font = ExtResource("4_uv3dc")
 theme_override_font_sizes/font_size = 70
-text = "Rayas adventure"
+text = "RAYAS ADVENTURE"
 
 [connection signal="pressed" from="HBoxContainer/BtnConfig" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/BtnIniciar" to="." method="_on_btn_iniciar_pressed"]

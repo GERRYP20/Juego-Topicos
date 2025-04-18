@@ -11,6 +11,5 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://source/screens/pantConfiguracion/pantConfig.tscn")
-	#SCN_T.cambia_escena("res://source/screens/pantConfiguracion/pantConfig.tscn")
+func _on_btn_iniciar_pressed() -> void:
+	SCN_T.cambia_escena("res://source/screens/pantJuego/pantJuego.tscn")

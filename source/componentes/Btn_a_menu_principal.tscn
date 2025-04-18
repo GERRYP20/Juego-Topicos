@@ -4,10 +4,10 @@
 [ext_resource type="Theme" uid="uid://dxkl17rvghnqm" path="res://resources/themes/informal_theme.tres" id="1_un5kk"]
 
 [node name="BtnAMenuPrincipal" type="Button"]
-offset_left = 913.0
-offset_top = 564.0
-offset_right = 1076.0
-offset_bottom = 609.0
+offset_left = 1096.0
+offset_top = 656.0
+offset_right = 1259.0
+offset_bottom = 701.0
 theme = ExtResource("1_un5kk")
 text = "MENÚ PRINCIPAL"
 script = ExtResource("1_s3m7s")
