@@ -17,10 +17,10 @@ texture = ExtResource("2_ryg0m")
 expand_mode = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-offset_left = 158.0
-offset_top = 333.0
-offset_right = 1070.0
-offset_bottom = 373.0
+offset_left = 310.0
+offset_top = 423.0
+offset_right = 987.0
+offset_bottom = 463.0
 alignment = 1
 
 [node name="BtnConfig" type="Button" parent="HBoxContainer"]
@@ -48,10 +48,10 @@ layout_mode = 2
 text = "BtnSalir"
 
 [node name="lblTitulo" type="Label" parent="."]
-offset_left = 388.0
-offset_top = 94.0
-offset_right = 836.0
-offset_bottom = 197.0
+offset_left = 420.0
+offset_top = 92.0
+offset_right = 868.0
+offset_bottom = 195.0
 theme = ExtResource("3_oc8u7")
 theme_override_fonts/font = ExtResource("4_uv3dc")
 theme_override_font_sizes/font_size = 70
