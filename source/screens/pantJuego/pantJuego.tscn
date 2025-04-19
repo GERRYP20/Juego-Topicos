@@ -12373,7 +12373,6 @@ tile_set = SubResource("TileSet_rwkdx")
 
 [node name="PersonajeB" parent="." instance=ExtResource("4_5jif8")]
 position = Vector2(671, 1048)
-collision_layer = 0
 
 [node name="BtnAMenuPrincipal" parent="." instance=ExtResource("7_ydx6h")]
 offset_left = 448.0

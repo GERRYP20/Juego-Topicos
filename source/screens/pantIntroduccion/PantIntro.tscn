@@ -1,6 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://mne4yvalv8a"]
+[gd_scene load_steps=4 format=3 uid="uid://mne4yvalv8a"]
 
 [ext_resource type="Script" path="res://source/screens/pantIntroduccion/pant_intro.gd" id="1_td672"]
+[ext_resource type="Texture2D" uid="uid://b3rtcoy8147p2" path="res://resources/imagenes/company.png" id="2_so4pi"]
+
+[sub_resource type="Theme" id="Theme_sun3f"]
 
 [node name="PantIntro" type="Node2D"]
 script = ExtResource("1_td672")
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+offset_right = 1456.0
+offset_bottom = 827.0
+theme = SubResource("Theme_sun3f")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 455.0
+offset_top = 147.0
+offset_right = 877.0
+offset_bottom = 576.0
+texture = ExtResource("2_so4pi")
+expand_mode = 1
