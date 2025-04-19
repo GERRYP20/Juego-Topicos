@@ -114,9 +114,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ds1fy"]
-size = Vector2(27.4375, 41.4375)
+size = Vector2(27.4375, 41)
 
 [node name="PersonajeB" type="CharacterBody2D"]
+collision_layer = 0
 motion_mode = 1
 script = ExtResource("1_u7mrw")
 
@@ -129,5 +130,5 @@ animation = &"caminar_abajo"
 [node name="Camera2D" type="Camera2D" parent="PersonajeB"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-130, -119)
+position = Vector2(-130, -116.5)
 shape = SubResource("RectangleShape2D_ds1fy")
