@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bfaclosrqprfa"]
 
-[ext_resource type="Script" path="res://source/componentes/btn_a_menu_principal.gd" id="1_s3m7s"]
+[ext_resource type="Script" uid="uid://bmvgi6uqjfgm2" path="res://source/componentes/btn_a_menu_principal.gd" id="1_s3m7s"]
 [ext_resource type="Theme" uid="uid://dxkl17rvghnqm" path="res://resources/themes/informal_theme.tres" id="1_un5kk"]
 
 [node name="BtnAMenuPrincipal" type="Button"]

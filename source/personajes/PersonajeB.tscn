@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://df6wd6lolgna6"]
 
-[ext_resource type="Script" path="res://source/personajes/personaje_b.gd" id="1_u7mrw"]
+[ext_resource type="Script" uid="uid://bnchjswnx45mw" path="res://source/personajes/personaje_b.gd" id="1_u7mrw"]
 [ext_resource type="Texture2D" uid="uid://ba6uxl2itsxob" path="res://resources/imagenes/caminando_abajo.png" id="2_ikkjx"]
 [ext_resource type="Texture2D" uid="uid://cgri1tb6qjxj8" path="res://resources/imagenes/BocetoAtrasPerroFinal.png" id="3_j1yxg"]
 [ext_resource type="Texture2D" uid="uid://npp34vvees1j" path="res://resources/imagenes/perro caminando a la derecha (1).png" id="4_pvatg"]

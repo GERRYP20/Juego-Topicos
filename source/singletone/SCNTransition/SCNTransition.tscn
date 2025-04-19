@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://d1qj4vtf14i8r"]
 
-[ext_resource type="Script" path="res://source/singletone/SCNTransition/SCNTransition.gd" id="1_lbfw7"]
+[ext_resource type="Script" uid="uid://dgtccerdau20x" path="res://source/singletone/SCNTransition/SCNTransition.gd" id="1_lbfw7"]
 
 [sub_resource type="Animation" id="Animation_giwtr"]
 length = 0.001
@@ -35,8 +35,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fmm1j"]
 _data = {
-"RESET": SubResource("Animation_giwtr"),
-"fade_in": SubResource("Animation_lbfw7")
+&"RESET": SubResource("Animation_giwtr"),
+&"fade_in": SubResource("Animation_lbfw7")
 }
 
 [node name="ScnTransition" type="CanvasLayer"]
