@@ -1,12 +1,12 @@
 extends CharacterBody2D
 
 @onready var per = $PersonajeB
-var speed: int = 200
+var speed: int = 500
 
 func _process(delta):
 	var direction := Vector2.ZERO
 
-	# Movimiento con WASD y flechas
+	# Movimiento del personaje según teclas presionadas
 	if Input.is_action_pressed("move_up"):
 		direction.y -= 1
 	if Input.is_action_pressed("move_down"):
@@ -16,14 +16,16 @@ func _process(delta):
 	if Input.is_action_pressed("move_right"):
 		direction.x += 1
 
-	# Si se está moviendo
 	if direction != Vector2.ZERO:
 		direction = direction.normalized()
-		per.position += direction * speed * delta
+		velocity = direction * speed
 		play_animation(direction)
 	else:
+		velocity = Vector2.ZERO
 		per.stop()
-		per.frame = 1  # Opcional: frame estático
+		per.frame = 1
+
+	move_and_slide()
 
 func play_animation(direction: Vector2):
 	if abs(direction.x) > abs(direction.y):
@@ -36,3 +38,22 @@ func play_animation(direction: Vector2):
 			per.play("caminar_arriba")
 		else:
 			per.play("caminar_abajo")
+
+func _set_collision_from_vector(direction: Vector2):
+	if abs(direction.x) > abs(direction.y):
+		if direction.x < 0:
+			_set_collision("move_left")
+		else:
+			_set_collision("move_right")
+	else:
+		if direction.y < 0:
+			_set_collision("move_up")
+		else:
+			_set_collision("move_down")
+
+# Este método activa solo una colisión dependiendo de la dirección
+func _set_collision(direction: String):
+	$CollisionShapeUp.disabled = (direction != "move_up")
+	$CollisionShapeDown.disabled = (direction != "move_down")
+	$CollisionShapeLeft.disabled = (direction != "move_left")
+	$CollisionShapeRight.disabled = (direction != "move_right")

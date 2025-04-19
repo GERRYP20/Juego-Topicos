@@ -1,6 +1,6 @@
-[gd_scene load_steps=20 format=3 uid="uid://df6wd6lolgna6"]
+[gd_scene load_steps=23 format=3 uid="uid://df6wd6lolgna6"]
 
-[ext_resource type="Script" path="res://source/personajes/personaje_b.gd" id="1_u7mrw"]
+[ext_resource type="Script" uid="uid://berthmqvslq87" path="res://source/personajes/personaje_b.gd" id="1_u7mrw"]
 [ext_resource type="Texture2D" uid="uid://ba6uxl2itsxob" path="res://resources/imagenes/caminando_abajo.png" id="2_ikkjx"]
 [ext_resource type="Texture2D" uid="uid://cgri1tb6qjxj8" path="res://resources/imagenes/BocetoAtrasPerroFinal.png" id="3_j1yxg"]
 [ext_resource type="Texture2D" uid="uid://npp34vvees1j" path="res://resources/imagenes/perro caminando a la derecha (1).png" id="4_pvatg"]
@@ -114,10 +114,18 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ds1fy"]
-size = Vector2(27.4375, 41)
+size = Vector2(27.4375, 45.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qyilt"]
+size = Vector2(27, 42)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oqyga"]
+size = Vector2(16, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0fcq7"]
+size = Vector2(15, 22)
 
 [node name="PersonajeB" type="CharacterBody2D"]
-collision_layer = 0
 motion_mode = 1
 script = ExtResource("1_u7mrw")
 
@@ -125,10 +133,22 @@ script = ExtResource("1_u7mrw")
 position = Vector2(-129, -126.5)
 scale = Vector2(0.19375, 0.209375)
 sprite_frames = SubResource("SpriteFrames_s1k3q")
-animation = &"caminar_abajo"
+animation = &"caminar_izquierda"
 
 [node name="Camera2D" type="Camera2D" parent="PersonajeB"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-130, -116.5)
+[node name="CollisionShapeUp" type="CollisionShape2D" parent="."]
+position = Vector2(-130, -127.75)
 shape = SubResource("RectangleShape2D_ds1fy")
+
+[node name="CollisionShapeDown" type="CollisionShape2D" parent="."]
+position = Vector2(-130.5, -118)
+shape = SubResource("RectangleShape2D_qyilt")
+
+[node name="CollisionShapeRight" type="CollisionShape2D" parent="."]
+position = Vector2(-117, -137)
+shape = SubResource("RectangleShape2D_oqyga")
+
+[node name="CollisionShapeLeft" type="CollisionShape2D" parent="."]
+position = Vector2(-142.5, -136)
+shape = SubResource("RectangleShape2D_0fcq7")

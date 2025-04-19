@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://cgx0yrce7s1mp"]
 
-[ext_resource type="Script" path="res://source/screens/pantPrincipal/pant_prin.gd" id="1_md2wj"]
+[ext_resource type="Script" uid="uid://cs20b1b6wlgd2" path="res://source/screens/pantPrincipal/pant_prin.gd" id="1_md2wj"]
 [ext_resource type="Texture2D" uid="uid://de3eff4yumnqe" path="res://resources/imagenes/menu2.png" id="2_ryg0m"]
 [ext_resource type="Theme" uid="uid://dxkl17rvghnqm" path="res://resources/themes/informal_theme.tres" id="3_oc8u7"]
-[ext_resource type="Script" path="res://source/screens/pantPrincipal/btn_iniciar.gd" id="3_twynu"]
-[ext_resource type="Script" path="res://source/screens/pantPrincipal/btn_salir.gd" id="4_6dygw"]
+[ext_resource type="Script" uid="uid://dpdxfyqhqwe2f" path="res://source/screens/pantPrincipal/btn_iniciar.gd" id="3_twynu"]
+[ext_resource type="Script" uid="uid://c04j4de34yasy" path="res://source/screens/pantPrincipal/btn_salir.gd" id="4_6dygw"]
 [ext_resource type="FontFile" uid="uid://13fv2426xy8p" path="res://resources/fonts/Londrina_Solid/LondrinaSolid-Light.ttf" id="4_uv3dc"]
 
 [node name="PantPrin" type="Node2D"]
