@@ -16,9 +16,9 @@ offset_bottom = 827.0
 theme = SubResource("Theme_sun3f")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = 455.0
-offset_top = 147.0
-offset_right = 877.0
-offset_bottom = 576.0
+offset_left = 482.0
+offset_top = 164.0
+offset_right = 904.0
+offset_bottom = 593.0
 texture = ExtResource("2_so4pi")
 expand_mode = 1

@@ -133,7 +133,7 @@ script = ExtResource("1_u7mrw")
 position = Vector2(-129, -126.5)
 scale = Vector2(0.19375, 0.209375)
 sprite_frames = SubResource("SpriteFrames_s1k3q")
-animation = &"caminar_izquierda"
+animation = &"caminar_abajo"
 
 [node name="Camera2D" type="Camera2D" parent="PersonajeB"]
 
