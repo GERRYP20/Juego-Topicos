@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmttwpfwdaw4o"]
+
+[ext_resource type="Script" uid="uid://bpgn4pqt1av8" path="res://source/singletone/pausa.gd" id="1_aoeoc"]
+[ext_resource type="FontFile" uid="uid://13fv2426xy8p" path="res://resources/fonts/Londrina_Solid/LondrinaSolid-Light.ttf" id="3_2yabw"]
+
+[node name="Pausa" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_aoeoc")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.188235)
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = 527.0
+offset_top = 212.0
+offset_right = 759.0
+offset_bottom = 331.0
+theme_override_fonts/font = ExtResource("3_2yabw")
+theme_override_font_sizes/font_size = 100
+text = "PAUSA"
+
+[node name="Label2" type="Label" parent="."]
+visible = false
+offset_left = 370.0
+offset_top = 384.0
+offset_right = 927.0
+offset_bottom = 503.0
+theme_override_fonts/font = ExtResource("3_2yabw")
+theme_override_font_sizes/font_size = 60
+text = "Presiona Esc para volver"

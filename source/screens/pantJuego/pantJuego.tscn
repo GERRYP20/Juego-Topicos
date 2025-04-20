@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=4 uid="uid://cest3gxpb5w6c"]
+[gd_scene load_steps=47 format=4 uid="uid://cest3gxpb5w6c"]
 
 [ext_resource type="Script" uid="uid://fcfch2rj60vx" path="res://source/screens/pantJuego/pant_juego.gd" id="1_gga42"]
 [ext_resource type="Texture2D" uid="uid://bssg2aaeulggg" path="res://resources/imagenes/TX Tileset Grass.png" id="2_6sd5f"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://3ib1e5d1m2ap" path="res://resources/imagenes/edificio6.png" id="17_ke7gf"]
 [ext_resource type="Texture2D" uid="uid://dx6oauctyxdg3" path="res://resources/imagenes/edificio7.png" id="19_vtgbs"]
 [ext_resource type="AudioStream" uid="uid://7fjvwcyl11k0" path="res://resources/audios/PantJuego.mp3" id="20_k1h3x"]
+[ext_resource type="PackedScene" uid="uid://cmttwpfwdaw4o" path="res://source/singletone/Pausa.tscn" id="21_fgy3q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i2qam"]
 texture = ExtResource("2_6sd5f")
@@ -13003,3 +13004,5 @@ tile_set = SubResource("TileSet_o3v0c")
 stream = ExtResource("20_k1h3x")
 volume_db = -4.685
 autoplay = true
+
+[node name="Pausa" parent="." instance=ExtResource("21_fgy3q")]
