@@ -1,4 +1,4 @@
-extends CharacterBody2D
+class_name Personaje extends CharacterBody2D
 
 @onready var per = $PersonajeB
 var speed: int = 500

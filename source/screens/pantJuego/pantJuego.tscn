@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=4 uid="uid://cest3gxpb5w6c"]
+[gd_scene load_steps=48 format=4 uid="uid://cest3gxpb5w6c"]
 
 [ext_resource type="Script" uid="uid://fcfch2rj60vx" path="res://source/screens/pantJuego/pant_juego.gd" id="1_gga42"]
 [ext_resource type="Texture2D" uid="uid://bssg2aaeulggg" path="res://resources/imagenes/TX Tileset Grass.png" id="2_6sd5f"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://dx6oauctyxdg3" path="res://resources/imagenes/edificio7.png" id="19_vtgbs"]
 [ext_resource type="AudioStream" uid="uid://7fjvwcyl11k0" path="res://resources/audios/PantJuego.mp3" id="20_k1h3x"]
 [ext_resource type="PackedScene" uid="uid://cmttwpfwdaw4o" path="res://source/singletone/Pausa.tscn" id="21_fgy3q"]
+[ext_resource type="PackedScene" uid="uid://brxnaetnpf8r8" path="res://source/componentes/Transicion/Transicion.tscn" id="22_bmghs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i2qam"]
 texture = ExtResource("2_6sd5f")
@@ -13006,3 +13007,7 @@ volume_db = -4.685
 autoplay = true
 
 [node name="Pausa" parent="." instance=ExtResource("21_fgy3q")]
+
+[node name="TransicionC" parent="." instance=ExtResource("22_bmghs")]
+position = Vector2(-878, 248)
+scene = "res://source/screens/edificios_niveles/ECafeteria/EdificioCafeteria.tscn"
