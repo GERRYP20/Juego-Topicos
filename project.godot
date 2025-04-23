@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Juego_Topicos"
-run/main_scene="res://source/screens/pantPrincipal/pantPrin.tscn"
+run/main_scene="uid://mne4yvalv8a"
 config/features=PackedStringArray("4.4", "Mobile")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/image="res://resources/imagenes/imagenlogo.png"
