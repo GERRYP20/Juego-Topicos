@@ -30,7 +30,7 @@ alignment = 1
 
 [node name="BtnConfig" type="Button" parent="HBoxContainer"]
 layout_mode = 2
-text = "Configuración"
+text = "BtnConfig"
 
 [node name="BtnIniciar" type="Button" parent="HBoxContainer"]
 layout_mode = 2

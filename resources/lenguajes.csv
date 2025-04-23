@@ -1,12 +1,12 @@
 id,es,en
-btnamenuprincipal,Menú principal,Main menu
-btncambiaridioma,Español,English
-lblconfig,Configuración,Settings
-lblcambiar,Cambiar idioma,Change language
-btnguardar,Guardar,Save
-btnconfig,Configuración,Settings
-btniniciar,Iniciar juego,Start game
-btncontinuar,Continuar partida,Continue
-btncreditos,Créditos,Credits
-btncomojugar,Cómo jugar,How to play
-btnsalir,Salir,Exit
+BtnConfig,Configuración,Settings
+BtnIniciar,Iniciar juego,Start game
+BtnContinuar,Continuar partida,Continue
+BtnCreditos,Créditos,Credits
+BtnComoJugar,Cómo jugar,How to play
+BtnAMenuPrincipal,Menú principal,Main menu
+BtnCambiarIdioma,Español,English
+LblConfig,Configuración,Settings
+LblCambiar,Cambiar idioma,Change language
+BtnGuardar,Guardar,Save
+BtnSalir,Salir,Exit
