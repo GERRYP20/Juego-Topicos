@@ -1,0 +1,80 @@
+[gd_scene load_steps=9 format=3 uid="uid://dmxnnasc74w7k"]
+
+[ext_resource type="Texture2D" uid="uid://cw8bgb4dxbuyt" path="res://resources/imagenes/creditos.jpeg" id="1_2mcs3"]
+[ext_resource type="FontFile" uid="uid://b2sjoc032quef" path="res://resources/fonts/Chelsea_Market/ChelseaMarket-Regular.ttf" id="2_b7eil"]
+[ext_resource type="PackedScene" uid="uid://w3c3ix730wnm" path="res://source/personajes/PAna.tscn" id="3_1xybo"]
+[ext_resource type="PackedScene" uid="uid://ckq48q6aa36c8" path="res://source/personajes/PEmma.tscn" id="4_j8wlu"]
+[ext_resource type="PackedScene" uid="uid://udyj30rbs55s" path="res://source/personajes/PGerardo.tscn" id="5_b7eil"]
+[ext_resource type="PackedScene" uid="uid://bfaclosrqprfa" path="res://source/componentes/Btn_a_menu_principal.tscn" id="6_1xybo"]
+[ext_resource type="AudioStream" uid="uid://browit301cam3" path="res://resources/audios/creditos.mp3" id="7_j8wlu"]
+
+[sub_resource type="Theme" id="Theme_1xybo"]
+
+[node name="PantCreditos" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1277.0
+offset_bottom = 724.0
+texture = ExtResource("1_2mcs3")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+offset_left = 371.0
+offset_top = 53.0
+offset_right = 960.0
+offset_bottom = 192.0
+theme_override_fonts/font = ExtResource("2_b7eil")
+theme_override_font_sizes/font_size = 100
+text = "CREADORES"
+
+[node name="PAna" parent="." instance=ExtResource("3_1xybo")]
+position = Vector2(149, 366)
+
+[node name="PEmma" parent="." instance=ExtResource("4_j8wlu")]
+position = Vector2(598, 362)
+
+[node name="PGerardo" parent="." instance=ExtResource("5_b7eil")]
+position = Vector2(946, 385)
+
+[node name="BtnAMenuPrincipal" parent="." instance=ExtResource("6_1xybo")]
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 173.0
+offset_top = 298.0
+offset_right = 407.0
+offset_bottom = 381.0
+theme = SubResource("Theme_1xybo")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_b7eil")
+theme_override_font_sizes/font_size = 30
+text = "ANA BARBARA 
+RIVERA GUIA"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 543.0
+offset_top = 296.0
+offset_right = 869.0
+offset_bottom = 379.0
+theme = SubResource("Theme_1xybo")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_b7eil")
+theme_override_font_sizes/font_size = 30
+text = "EMMANUEL MORALES
+ORIHUELA"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 941.0
+offset_top = 297.0
+offset_right = 1184.0
+offset_bottom = 380.0
+theme = SubResource("Theme_1xybo")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_b7eil")
+theme_override_font_sizes/font_size = 30
+text = "GERARDO PÉREZ
+SÁNCHEZ"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_j8wlu")
+volume_db = -5.652
+autoplay = true

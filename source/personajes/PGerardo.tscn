@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://udyj30rbs55s"]
+
+[ext_resource type="Script" uid="uid://bl6lpxv8tnxnu" path="res://source/personajes/p_gerardo.gd" id="1_ruypl"]
+[ext_resource type="Texture2D" uid="uid://bit2c6ies0r0v" path="res://resources/imagenes/yo (1).png" id="2_diatg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dw18x"]
+atlas = ExtResource("2_diatg")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7svup"]
+atlas = ExtResource("2_diatg")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_28jmc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dw18x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7svup")
+}],
+"loop": true,
+"name": &"nada",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1824b"]
+size = Vector2(86, 137)
+
+[node name="PGerardo" type="CharacterBody2D"]
+script = ExtResource("1_ruypl")
+
+[node name="PGerardo" type="AnimatedSprite2D" parent="."]
+position = Vector2(93, 120.5)
+scale = Vector2(2.46875, 2.76563)
+sprite_frames = SubResource("SpriteFrames_28jmc")
+animation = &"nada"
+frame_progress = 0.295236
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(98, 123.5)
+shape = SubResource("RectangleShape2D_1824b")

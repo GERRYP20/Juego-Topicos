@@ -12,8 +12,8 @@ font_size = 32
 script = ExtResource("1_b6voc")
 
 [node name="Panel" type="Panel" parent="."]
-offset_right = 1503.0
-offset_bottom = 822.0
+offset_right = 1283.0
+offset_bottom = 725.0
 
 [node name="BtnAMenuPrincipal" parent="Panel" instance=ExtResource("2_ta2h8")]
 layout_mode = 0
@@ -25,20 +25,20 @@ text = "BtnAMenuPrincipal"
 
 [node name="BtnCambiarIdioma" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 545.0
-offset_top = 269.0
-offset_right = 717.0
-offset_bottom = 324.0
+offset_left = 554.0
+offset_top = 316.0
+offset_right = 726.0
+offset_bottom = 371.0
 theme_override_fonts/font = ExtResource("3_rfh70")
 theme_override_font_sizes/font_size = 0
 text = "BtnCambiarIdioma"
 
 [node name="LblConfig" type="Label" parent="Panel"]
 layout_mode = 0
-offset_left = 398.0
-offset_top = 73.0
-offset_right = 763.0
-offset_bottom = 165.0
+offset_left = 441.0
+offset_top = 116.0
+offset_right = 806.0
+offset_bottom = 208.0
 theme = ExtResource("4_30887")
 theme_override_fonts/font = ExtResource("3_rfh70")
 theme_override_font_sizes/font_size = 24
@@ -50,18 +50,18 @@ vertical_alignment = 1
 [node name="LblCambiar" type="Label" parent="Panel"]
 layout_mode = 0
 offset_left = 373.0
-offset_top = 288.0
+offset_top = 328.0
 offset_right = 496.0
-offset_bottom = 311.0
+offset_bottom = 351.0
 theme = ExtResource("4_30887")
 text = "LblCambiar"
 
 [node name="BtnGuardar" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 547.0
-offset_top = 387.0
-offset_right = 716.0
-offset_bottom = 437.0
+offset_left = 556.0
+offset_top = 439.0
+offset_right = 725.0
+offset_bottom = 489.0
 theme = ExtResource("4_30887")
 text = "BtnGuardar"
 
