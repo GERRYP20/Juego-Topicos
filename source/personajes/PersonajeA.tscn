@@ -1,10 +1,54 @@
-[gd_scene load_steps=19 format=3 uid="uid://borr7kphqespa"]
+[gd_scene load_steps=19 format=3 uid="uid://bg1bs3u2qsd04"]
 
-[ext_resource type="Script" uid="uid://bjnyxwon8en6j" path="res://source/personajes/personaje_a.gd" id="1_ny2t0"]
 [ext_resource type="Texture2D" uid="uid://ba6uxl2itsxob" path="res://resources/imagenes/caminando_abajo.png" id="2_chb7t"]
 [ext_resource type="Texture2D" uid="uid://cgri1tb6qjxj8" path="res://resources/imagenes/BocetoAtrasPerroFinal.png" id="3_87yay"]
 [ext_resource type="Texture2D" uid="uid://npp34vvees1j" path="res://resources/imagenes/perro caminando a la derecha (1).png" id="4_itxfk"]
 [ext_resource type="Texture2D" uid="uid://undmwjlu85xd" path="res://resources/imagenes/perro caminando a la izquierda (2).png" id="5_4q5rt"]
+
+[sub_resource type="GDScript" id="GDScript_r4iqa"]
+script/source = "extends Node2D
+
+@onready var per = $PersonajeA
+var speed: int = 120
+
+func _ready():
+	per.animation = \"caminar_derecha\"
+
+func _process(delta):
+	var moving := false
+	var direction := Vector2.ZERO
+
+	if Input.is_action_pressed(\"ui_up\"):
+		direction.y -= 1
+	if Input.is_action_pressed(\"ui_down\"):
+		direction.y += 1
+	if Input.is_action_pressed(\"ui_left\"):
+		direction.x -= 1
+	if Input.is_action_pressed(\"ui_right\"):
+		direction.x += 1
+
+	if direction != Vector2.ZERO:
+		moving = true
+		direction = direction.normalized()
+		per.position += direction * speed * delta
+
+		# Animaciones según dirección
+		if direction.y < 0:
+			per.play(\"caminar_arriba\")
+		elif direction.y > 0:
+			per.play(\"caminar_abajo\")
+		elif direction.x < 0:
+			per.play(\"caminar_izquierda\")
+		elif direction.x > 0:
+			per.play(\"caminar_derecha\")
+	else:
+		per.stop()
+		per.frame = 1  # Opcional: depende si tu sprite tiene un frame estático
+
+# Este método no se usa en tu código, pero lo mantengo si lo necesitas más adelante.
+func _input_2_keys(k1: String, k2: String) -> bool:
+	return Input.is_action_pressed(k1) or Input.is_action_pressed(k2)
+"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0q5wl"]
 atlas = ExtResource("2_chb7t")
@@ -114,7 +158,7 @@ animations = [{
 }]
 
 [node name="PersonajeA" type="Node2D"]
-script = ExtResource("1_ny2t0")
+script = SubResource("GDScript_r4iqa")
 
 [node name="PersonajeA" type="AnimatedSprite2D" parent="."]
 position = Vector2(182.978, 183.094)

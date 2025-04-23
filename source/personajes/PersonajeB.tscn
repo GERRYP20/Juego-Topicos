@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://npp34vvees1j" path="res://resources/imagenes/perro caminando a la derecha (1).png" id="4_pvatg"]
 [ext_resource type="Texture2D" uid="uid://undmwjlu85xd" path="res://resources/imagenes/perro caminando a la izquierda (2).png" id="5_pnvbs"]
 [ext_resource type="FontFile" uid="uid://ooiqbbq6yn0v" path="res://resources/fonts/Londrina_Solid/LondrinaSolid-Black.ttf" id="6_0fcq7"]
-[ext_resource type="Script" uid="uid://bjw5mbss78oea" path="res://source/personajes/button.gd" id="7_f26b2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x81yx"]
 atlas = ExtResource("2_ikkjx")
@@ -115,6 +114,10 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="GDScript" id="GDScript_oqyga"]
+script/source = "extends Button
+"
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ds1fy"]
 size = Vector2(27.4375, 45.5)
 
@@ -147,7 +150,7 @@ offset_bottom = -1363.4
 theme_override_fonts/font = ExtResource("6_0fcq7")
 theme_override_font_sizes/font_size = 100
 text = "PAUSA"
-script = ExtResource("7_f26b2")
+script = SubResource("GDScript_oqyga")
 
 [node name="CollisionShapeUp" type="CollisionShape2D" parent="."]
 position = Vector2(-130, -127.75)

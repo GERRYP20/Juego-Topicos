@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://w3c3ix730wnm"]
+
+[ext_resource type="Script" uid="uid://ddojay77qisgn" path="res://source/personajes/p_ana.gd" id="1_23x77"]
+[ext_resource type="Texture2D" uid="uid://bgcdjcohqjq0w" path="res://resources/imagenes/ana.png" id="2_vl3vs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4lj0n"]
+atlas = ExtResource("2_vl3vs")
+region = Rect2(0, 0, 64, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rpxek"]
+atlas = ExtResource("2_vl3vs")
+region = Rect2(64, 0, 64, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iytap"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4lj0n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rpxek")
+}],
+"loop": true,
+"name": &"nada",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ej8lf"]
+size = Vector2(46.5, 155.75)
+
+[node name="PAna" type="CharacterBody2D"]
+script = ExtResource("1_23x77")
+
+[node name="PAna" type="AnimatedSprite2D" parent="."]
+position = Vector2(132, 133.5)
+scale = Vector2(2.09375, 2.23958)
+sprite_frames = SubResource("SpriteFrames_iytap")
+animation = &"nada"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(132.75, 133.125)
+shape = SubResource("RectangleShape2D_ej8lf")
