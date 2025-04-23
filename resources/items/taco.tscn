@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=3 uid="uid://c8ckudmx8bckq"]
+
+[ext_resource type="Texture2D" uid="uid://dnoujw2w6i26a" path="res://resources/imagenes/taco.png" id="1_4dpxj"]
+[ext_resource type="Script" uid="uid://cabhm3cvisyeg" path="res://resources/items/taco.gd" id="1_p8syq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p8syq"]
+atlas = ExtResource("1_4dpxj")
+region = Rect2(0, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wqdew"]
+atlas = ExtResource("1_4dpxj")
+region = Rect2(500, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rp3lh"]
+atlas = ExtResource("1_4dpxj")
+region = Rect2(1000, 0, 500, 500)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pmpps"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p8syq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wqdew")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rp3lh")
+}],
+"loop": true,
+"name": &"item",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vkvn8"]
+size = Vector2(32, 18)
+
+[node name="Taco" type="Area2D"]
+script = ExtResource("1_p8syq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(216.5, 122.25)
+scale = Vector2(0.066, 0.063)
+sprite_frames = SubResource("SpriteFrames_pmpps")
+animation = &"item"
+frame_progress = 0.518181
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(217, 124)
+shape = SubResource("RectangleShape2D_vkvn8")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

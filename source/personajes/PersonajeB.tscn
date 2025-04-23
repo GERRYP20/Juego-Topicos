@@ -128,9 +128,9 @@ size = Vector2(27, 42)
 size = Vector2(16, 22)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0fcq7"]
-size = Vector2(15, 22)
+size = Vector2(28, 16)
 
-[node name="PersonajeB" type="CharacterBody2D"]
+[node name="PersonajeB" type="CharacterBody2D" groups=["Jugador"]]
 motion_mode = 1
 script = ExtResource("1_u7mrw")
 
@@ -138,7 +138,7 @@ script = ExtResource("1_u7mrw")
 position = Vector2(-129, -126.5)
 scale = Vector2(0.19375, 0.209375)
 sprite_frames = SubResource("SpriteFrames_s1k3q")
-animation = &"caminar_abajo"
+animation = &"caminar_izquierda"
 
 [node name="Camera2D" type="Camera2D" parent="PersonajeB"]
 
@@ -153,17 +153,23 @@ text = "PAUSA"
 script = SubResource("GDScript_oqyga")
 
 [node name="CollisionShapeUp" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(-130, -127.75)
 shape = SubResource("RectangleShape2D_ds1fy")
+disabled = true
 
 [node name="CollisionShapeDown" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(-130.5, -118)
 shape = SubResource("RectangleShape2D_qyilt")
+disabled = true
 
 [node name="CollisionShapeRight" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(-117, -137)
 shape = SubResource("RectangleShape2D_oqyga")
+disabled = true
 
 [node name="CollisionShapeLeft" type="CollisionShape2D" parent="."]
-position = Vector2(-142.5, -136)
+position = Vector2(-130, -124)
 shape = SubResource("RectangleShape2D_0fcq7")

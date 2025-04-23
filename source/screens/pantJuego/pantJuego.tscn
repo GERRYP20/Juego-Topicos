@@ -13082,7 +13082,7 @@ scene = "res://source/screens/edificios_niveles/ECafeteria/EdificioCafeteria.tsc
 [node name="PDario" parent="personajes" groups=["interacturar"] instance=ExtResource("23_ewces")]
 position = Vector2(153, 723)
 
-[node name="PersonajeB" parent="personajes" groups=["interacturar"] instance=ExtResource("4_5jif8")]
+[node name="PersonajeB" parent="personajes" instance=ExtResource("4_5jif8")]
 position = Vector2(667, 1049)
 
 [node name="TileEdificios" type="TileMapLayer" parent="personajes"]

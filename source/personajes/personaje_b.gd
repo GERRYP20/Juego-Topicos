@@ -1,7 +1,8 @@
-class_name Personaje extends CharacterBody2D
+class_name Personaje
+extends CharacterBody2D
 
 @onready var per = $PersonajeB
-var speed: int = 500
+var speed: int = 250
 
 func _process(delta):
 	var direction := Vector2.ZERO
@@ -20,6 +21,7 @@ func _process(delta):
 		direction = direction.normalized()
 		velocity = direction * speed
 		play_animation(direction)
+		_set_collision_from_vector(direction)  # Activar/desactivar colisiones según dirección
 	else:
 		velocity = Vector2.ZERO
 		per.stop()
@@ -51,7 +53,7 @@ func _set_collision_from_vector(direction: Vector2):
 		else:
 			_set_collision("move_down")
 
-# Este método activa solo una colisión dependiendo de la dirección
+# Activa solo una colisión dependiendo de la dirección
 func _set_collision(direction: String):
 	$CollisionShapeUp.disabled = (direction != "move_up")
 	$CollisionShapeDown.disabled = (direction != "move_down")

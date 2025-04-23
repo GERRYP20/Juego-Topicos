@@ -31,6 +31,10 @@ GDialogos="*res://resources/scriptsd/dialogos.gd"
 window/size/viewport_width=1280
 window/size/viewport_height=720
 
+[global_group]
+
+Jugador=""
+
 [input]
 
 move_up={
