@@ -12,4 +12,8 @@ func _process(delta: float) -> void:
 
 
 func _on_btn_iniciar_pressed() -> void:
-	SCN_T.cambia_escena("res://source/screens/pantJuego/pantJuego.tscn")
+	CRC_T.cambia_escena("res://source/screens/pantJuego/pantJuego.tscn")
+
+
+func _on_button_pressed() -> void:
+	SCN_T.cambia_escena("res://source/screens/pantConfiguracion/pantConfig.tscn")

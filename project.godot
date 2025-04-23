@@ -59,6 +59,10 @@ pausa={
 ]
 }
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://resources/lenguajes.en.translation", "res://resources/lenguajes.es.translation")
+
 [rendering]
 
 renderer/rendering_method="mobile"

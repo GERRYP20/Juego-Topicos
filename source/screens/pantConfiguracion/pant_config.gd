@@ -19,7 +19,7 @@ func _process(_delta: float) -> void:
 	pass
 
 
-func language_control():
+func language_control():	
 	print("Language control")
 	var lenguaje_settings=CONFIG_FILE.load_lenguaje_setting()
 	var al=lenguaje_settings.lengua_activa
