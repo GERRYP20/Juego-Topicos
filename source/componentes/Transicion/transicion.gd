@@ -1,9 +1,5 @@
 
-## TransitionArea indica una zona del mapa que servirá para cambiar a 
-##otra escena, esto es cuando se entre o salga de un edificio
 class_name TransitionArea extends Area2D
-## Scene es la ruta, en formato de cadena, a la escena a la que
-## queremos cambiar.
 @export var scene:String
 signal scene_change
 

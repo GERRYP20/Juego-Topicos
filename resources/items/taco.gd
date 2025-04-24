@@ -5,9 +5,7 @@ var velocity = Vector2.ZERO  # O la forma en que se actualice
 
 func _physics_process(delta):
 	var is_moving = velocity.length() > 0.1
-
 	if is_moving:
-		# por ejemplo: sprite.play("caminando")
 		pass
 	else:
 		sprite.play("item")
