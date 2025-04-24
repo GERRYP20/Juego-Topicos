@@ -16,7 +16,7 @@ func _on_btn_iniciar_pressed() -> void:
 
 
 func _on_button_pressed() -> void:
-	SCN_T.cambia_escena("res://source/screens/pantConfiguracion/pantConfig.tscn")
+	RECT_T.cambia_escena_rect("res://source/screens/pantConfiguracion/pantConfig.tscn")
 
 
 func _on_btn_creditos_pressed() -> void:

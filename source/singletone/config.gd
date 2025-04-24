@@ -22,6 +22,8 @@ func _ready() -> void:
 		config.set_value("Personaje","speed",100)
 		config.set_value("Personaje","maxhealth",100)
 		config.set_value("Personaje","basedamage",100)
+		config.set_value("Personaje","taco",10)
+		config.set_value("Personaje","pedigree",30)
 		config.set_value("Personaje","nutrescan",20)
 		config.set_value("Personaje","pedigree",30)
 		config.set_value("Personaje","playername","")
