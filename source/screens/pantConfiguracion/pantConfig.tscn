@@ -1,15 +1,23 @@
-[gd_scene load_steps=6 format=3 uid="uid://b75bdvywq616u"]
+[gd_scene load_steps=8 format=3 uid="uid://b75bdvywq616u"]
 
 [ext_resource type="Script" uid="uid://f4cdskxijhr1" path="res://source/screens/pantConfiguracion/pant_config.gd" id="1_b6voc"]
 [ext_resource type="PackedScene" uid="uid://bfaclosrqprfa" path="res://source/componentes/Btn_a_menu_principal.tscn" id="2_ta2h8"]
+[ext_resource type="Texture2D" uid="uid://djqni0c4jrpu4" path="res://resources/imagenes/fondoAjustes.jpg" id="2_v2b6r"]
 [ext_resource type="FontFile" uid="uid://b2sjoc032quef" path="res://resources/fonts/Chelsea_Market/ChelseaMarket-Regular.ttf" id="3_rfh70"]
 [ext_resource type="Theme" uid="uid://dxkl17rvghnqm" path="res://resources/themes/informal_theme.tres" id="4_30887"]
+[ext_resource type="AudioStream" uid="uid://dl3gujtnuerit" path="res://resources/audios/ajustes.mp3" id="5_0fr1p"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_rfh70"]
-font_size = 32
+font_size = 36
 
 [node name="PantConfig" type="Node2D"]
 script = ExtResource("1_b6voc")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1284.0
+offset_bottom = 723.0
+texture = ExtResource("2_v2b6r")
+expand_mode = 1
 
 [node name="Panel" type="Panel" parent="."]
 offset_right = 1283.0
@@ -64,6 +72,10 @@ offset_right = 725.0
 offset_bottom = 489.0
 theme = ExtResource("4_30887")
 text = "BtnGuardar"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_0fr1p")
+autoplay = true
 
 [connection signal="pressed" from="Panel/BtnCambiarIdioma" to="." method="_on_btn_cambiar_idioma_pressed"]
 [connection signal="pressed" from="Panel/BtnGuardar" to="." method="_on_btn_guardar_pressed"]

@@ -49,8 +49,8 @@ script = ExtResource("1_mt3wx")
 
 [node name="CircleRect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_w663n")
-offset_right = 1713.0
-offset_bottom = 1045.0
+offset_right = 1279.0
+offset_bottom = 723.0
 color = Color(0, 0, 0, 1)
 
 [node name="ANPTran" type="AnimationPlayer" parent="."]

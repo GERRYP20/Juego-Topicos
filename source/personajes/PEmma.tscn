@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://ckq48q6aa36c8"]
 
-[ext_resource type="Script" uid="uid://d3crojuldycxl" path="res://source/personajes/p_emma.gd" id="1_c6wen"]
+[ext_resource type="Script" path="res://source/personajes/p_emma.gd" id="1_c6wen"]
 [ext_resource type="Texture2D" uid="uid://rfywl01856sy" path="res://resources/imagenes/emma.png" id="2_6hd7u"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yfnqs"]
