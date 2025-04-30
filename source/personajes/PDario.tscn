@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://buejtgvhkdptv"]
 
-[ext_resource type="Script" uid="uid://bh26t465ki1xa" path="res://source/personajes/p_dario.gd" id="1_oytr2"]
+[ext_resource type="Script" uid="uid://dcfppuivkog6h" path="res://source/componentes/scripts/p_dario.gd" id="1_oytr2"]
 [ext_resource type="Texture2D" uid="uid://mx6pd8uyghoy" path="res://resources/imagenes/PDario.png" id="2_skiep"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_srupq"]
@@ -31,7 +31,7 @@ size = Vector2(40, 66)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oytr2"]
 size = Vector2(37, 64)
 
-[node name="PDario" type="CharacterBody2D"]
+[node name="PDario" type="CharacterBody2D" groups=["interactuar"]]
 script = ExtResource("1_oytr2")
 
 [node name="PDario" type="AnimatedSprite2D" parent="."]
@@ -44,7 +44,7 @@ frame_progress = 0.622799
 position = Vector2(176, 177)
 shape = SubResource("RectangleShape2D_5nm6o")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." groups=["interactuar"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(176, 177)

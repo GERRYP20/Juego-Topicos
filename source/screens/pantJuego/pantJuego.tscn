@@ -13079,11 +13079,32 @@ scene = "res://source/screens/edificios_niveles/ECafeteria/EdificioCafeteria.tsc
 
 [node name="personajes" type="Node" parent="."]
 
-[node name="PDario" parent="personajes" groups=["interacturar"] instance=ExtResource("23_ewces")]
+[node name="PDario" parent="personajes" instance=ExtResource("23_ewces")]
 position = Vector2(153, 723)
 
 [node name="PersonajeB" parent="personajes" instance=ExtResource("4_5jif8")]
-position = Vector2(667, 1049)
+position = Vector2(-126, 590)
+
+[node name="CanvasLayer" parent="personajes/PersonajeB/Dialogos" index="0"]
+visible = true
+
+[node name="TextureRect" parent="personajes/PersonajeB/Dialogos/CanvasLayer" index="0"]
+offset_left = -117.0
+offset_top = 972.0
+offset_right = 60.0
+offset_bottom = 1134.0
+
+[node name="Label" parent="personajes/PersonajeB/Dialogos/CanvasLayer" index="1"]
+offset_left = -49.0
+offset_top = 1114.0
+offset_right = 1130.0
+offset_bottom = 1289.0
+
+[node name="TextureRect" parent="personajes/PersonajeB/Dialogos/CanvasLayer/Label" index="0"]
+offset_left = -62.0
+offset_top = -21.0
+offset_right = 1202.0
+offset_bottom = 193.0
 
 [node name="TileEdificios" type="TileMapLayer" parent="personajes"]
 position = Vector2(-4, 1)
@@ -13094,3 +13115,5 @@ tile_set = SubResource("TileSet_o3v0c")
 [connection signal="body_exited" from="personajes/PDario/Area2D" to="personajes/PDario" method="_on_area_2d_body_exited"]
 
 [editable path="personajes/PDario"]
+[editable path="personajes/PersonajeB"]
+[editable path="personajes/PersonajeB/Dialogos"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://df6wd6lolgna6"]
+[gd_scene load_steps=27 format=3 uid="uid://df6wd6lolgna6"]
 
 [ext_resource type="Script" uid="uid://berthmqvslq87" path="res://source/personajes/personaje_b.gd" id="1_u7mrw"]
 [ext_resource type="Texture2D" uid="uid://ba6uxl2itsxob" path="res://resources/imagenes/caminando_abajo.png" id="2_ikkjx"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://npp34vvees1j" path="res://resources/imagenes/perro caminando a la derecha (1).png" id="4_pvatg"]
 [ext_resource type="Texture2D" uid="uid://undmwjlu85xd" path="res://resources/imagenes/perro caminando a la izquierda (2).png" id="5_pnvbs"]
 [ext_resource type="FontFile" uid="uid://ooiqbbq6yn0v" path="res://resources/fonts/Londrina_Solid/LondrinaSolid-Black.ttf" id="6_0fcq7"]
+[ext_resource type="PackedScene" uid="uid://buf8x7n2b465w" path="res://source/componentes/Dialogos/Dialogos.tscn" id="7_0fcq7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x81yx"]
 atlas = ExtResource("2_ikkjx")
@@ -119,28 +120,32 @@ script/source = "extends Button
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ds1fy"]
-size = Vector2(27.4375, 45.5)
+size = Vector2(31.7188, 19)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qyilt"]
-size = Vector2(27, 42)
+size = Vector2(36.5, 19)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oqyga"]
-size = Vector2(16, 22)
+size = Vector2(33, 27)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0fcq7"]
-size = Vector2(28, 16)
+size = Vector2(42, 29.5)
 
-[node name="PersonajeB" type="CharacterBody2D" groups=["Jugador"]]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f26b2"]
+size = Vector2(55, 48)
+
+[node name="PersonajeB" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_u7mrw")
 
 [node name="PersonajeB" type="AnimatedSprite2D" parent="."]
-position = Vector2(-129, -126.5)
+position = Vector2(647, 357)
 scale = Vector2(0.19375, 0.209375)
 sprite_frames = SubResource("SpriteFrames_s1k3q")
 animation = &"caminar_izquierda"
 
 [node name="Camera2D" type="Camera2D" parent="PersonajeB"]
+position = Vector2(-10.3226, 33.4328)
 
 [node name="Button" type="Button" parent="PersonajeB/Camera2D"]
 offset_left = -3127.74
@@ -154,22 +159,43 @@ script = SubResource("GDScript_oqyga")
 
 [node name="CollisionShapeUp" type="CollisionShape2D" parent="."]
 visible = false
-position = Vector2(-130, -127.75)
+position = Vector2(646.859, 363.5)
 shape = SubResource("RectangleShape2D_ds1fy")
 disabled = true
 
 [node name="CollisionShapeDown" type="CollisionShape2D" parent="."]
 visible = false
-position = Vector2(-130.5, -118)
+position = Vector2(652.75, 359.5)
 shape = SubResource("RectangleShape2D_qyilt")
 disabled = true
 
 [node name="CollisionShapeRight" type="CollisionShape2D" parent="."]
 visible = false
-position = Vector2(-117, -137)
+position = Vector2(651.5, 355.5)
 shape = SubResource("RectangleShape2D_oqyga")
 disabled = true
 
 [node name="CollisionShapeLeft" type="CollisionShape2D" parent="."]
-position = Vector2(-130, -124)
+visible = false
+position = Vector2(653, 355.25)
 shape = SubResource("RectangleShape2D_0fcq7")
+
+[node name="Dialogos" parent="." instance=ExtResource("7_0fcq7")]
+
+[node name="CanvasLayer" parent="Dialogos" index="0"]
+visible = false
+
+[node name="TextureRect" parent="Dialogos/CanvasLayer/Label" index="0"]
+layout_mode = 0
+offset_left = -28.0
+offset_top = -10.0
+offset_right = 1236.0
+offset_bottom = 204.0
+
+[node name="Area2D" type="Area2D" parent="." groups=["interactuar"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(650.5, 354)
+shape = SubResource("RectangleShape2D_f26b2")
+
+[editable path="Dialogos"]
