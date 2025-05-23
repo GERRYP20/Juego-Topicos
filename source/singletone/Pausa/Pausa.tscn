@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cmttwpfwdaw4o"]
 
-[ext_resource type="Script" uid="uid://bpgn4pqt1av8" path="res://source/singletone/pausa.gd" id="1_aoeoc"]
+[ext_resource type="Script" uid="uid://bpgn4pqt1av8" path="res://source/singletone/Pausa/pausa.gd" id="1_aoeoc"]
 [ext_resource type="FontFile" uid="uid://13fv2426xy8p" path="res://resources/fonts/Londrina_Solid/LondrinaSolid-Light.ttf" id="3_2yabw"]
 
 [node name="Pausa" type="CanvasLayer"]

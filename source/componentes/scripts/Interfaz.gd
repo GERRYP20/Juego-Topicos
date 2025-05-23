@@ -1,5 +1,5 @@
 extends Control
-const icoDario=preload("res://resources/imagenes/company1.png")
+const icoDario=preload("res://resources/imagenes/icons_bg/company1.png")
 func _ready():
 	pass
 func _activar(TEXTO: String, IMAGE: Texture)-> void:

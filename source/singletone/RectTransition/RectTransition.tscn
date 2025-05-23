@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://wsspgieql0jn"]
 
-[ext_resource type="Script" uid="uid://dgq3u475bgb2" path="res://source/singletone/rect_transition.gd" id="1_gnib7"]
+[ext_resource type="Script" uid="uid://dgq3u475bgb2" path="res://source/singletone/RectTransition/rect_transition.gd" id="1_gnib7"]
 [ext_resource type="Shader" uid="uid://3jl217e8eyii" path="res://source/shaders/RectangleShader.gdshader" id="2_ymdqi"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nivtk"]

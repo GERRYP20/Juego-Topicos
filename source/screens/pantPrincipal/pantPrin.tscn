@@ -91,4 +91,6 @@ position = Vector2(1063, 420)
 
 [connection signal="pressed" from="HBoxContainer/BtnConfig" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/BtnIniciar" to="." method="_on_btn_iniciar_pressed"]
+[connection signal="pressed" from="HBoxContainer/BtnContinuar" to="." method="_on_btn_continuar_pressed"]
 [connection signal="pressed" from="HBoxContainer/BtnCreditos" to="." method="_on_btn_creditos_pressed"]
+[connection signal="pressed" from="HBoxContainer/BtnSalir" to="." method="_on_btn_salir_pressed"]

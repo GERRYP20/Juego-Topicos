@@ -21,11 +21,12 @@ boot_splash/minimum_display_time=10
 [autoload]
 
 SCN_T="*res://source/singletone/SCNTransition/SCNTransition.tscn"
-CONFIG_FILE="*res://source/singletone/config.gd"
-GLOBAL="*res://source/singletone/global.tscn"
-CRC_T="*res://source/singletone/CircleTransition.tscn"
-RECT_T="*res://source/singletone/RectTransition.tscn"
+CONFIG_FILE="*res://source/singletone/Config/config.gd"
+GLOBAL="*res://source/singletone/Global/global.tscn"
+CRC_T="*res://source/singletone/CircleTransition/CircleTransition.tscn"
+RECT_T="*res://source/singletone/RectTransition/RectTransition.tscn"
 GDialogos="*res://source/componentes/scripts/dialogos.gd"
+SAVEFILE="*res://source/singletone/SaveFile/save_file.tscn"
 
 [display]
 

@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dh3kwuot5oud" path="res://resources/imagenes/tilesets/cocina.png" id="6_25fix"]
 [ext_resource type="PackedScene" uid="uid://brxnaetnpf8r8" path="res://source/componentes/Transicion/Transicion.tscn" id="7_6igq0"]
 [ext_resource type="AudioStream" uid="uid://cnjvvyd0l7jlr" path="res://resources/audios/cafeteria.mp3" id="8_r6y31"]
-[ext_resource type="PackedScene" uid="uid://cmttwpfwdaw4o" path="res://source/singletone/Pausa.tscn" id="9_5go0w"]
+[ext_resource type="PackedScene" uid="uid://cmttwpfwdaw4o" path="res://source/singletone/Pausa/Pausa.tscn" id="9_5go0w"]
 [ext_resource type="PackedScene" uid="uid://c8ckudmx8bckq" path="res://resources/items/taco.tscn" id="10_kh8j4"]
 [ext_resource type="Texture2D" uid="uid://1wx8tmsf4r0d" path="res://resources/imagenes/taco1.png" id="11_xmcv2"]
 
