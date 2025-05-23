@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqc1lyxmsky6y"]
+
+[ext_resource type="Script" uid="uid://cdnnypp0xg63r" path="res://source/singletone/ThreadLoader/thread_loader.gd" id="1_mgwn6"]
+
+[node name="ThreadLoader" type="Node"]
+script = ExtResource("1_mgwn6")

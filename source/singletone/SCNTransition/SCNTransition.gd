@@ -17,3 +17,13 @@ func cambia_escena(path:String):
 	$ANPFade.play_backwards("fade_in")
 	await($ANPFade.animation_finished)
 	layer=-5
+
+
+func cambia_escena_packed(scene:PackedScene):
+	layer=1
+	$ANPFade.play("fade_in")
+	await($ANPFade.animation_finished)
+	get_tree().change_scene_to_packed(scene)
+	$ANPFade.play_backwards("fade_in")
+	await($ANPFade.animation_finished)
+	layer=-5

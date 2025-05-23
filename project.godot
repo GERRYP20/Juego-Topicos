@@ -27,6 +27,7 @@ CRC_T="*res://source/singletone/CircleTransition/CircleTransition.tscn"
 RECT_T="*res://source/singletone/RectTransition/RectTransition.tscn"
 GDialogos="*res://source/componentes/scripts/dialogos.gd"
 SAVEFILE="*res://source/singletone/SaveFile/save_file.tscn"
+THR_LOADER="*res://source/singletone/ThreadLoader/ThreadLoader.tscn"
 
 [display]
 
