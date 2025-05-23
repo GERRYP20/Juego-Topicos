@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://buejtgvhkdptv"]
 
 [ext_resource type="Script" uid="uid://dcfppuivkog6h" path="res://source/componentes/scripts/p_dario.gd" id="1_oytr2"]
-[ext_resource type="Texture2D" uid="uid://mx6pd8uyghoy" path="res://resources/imagenes/PDario.png" id="2_skiep"]
+[ext_resource type="Texture2D" uid="uid://mx6pd8uyghoy" path="res://resources/imagenes/personajes/PDario.png" id="2_skiep"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_srupq"]
 atlas = ExtResource("2_skiep")

@@ -14,7 +14,7 @@ config/name="Juego_Topicos"
 run/main_scene="uid://mne4yvalv8a"
 config/features=PackedStringArray("4.4", "Mobile")
 boot_splash/bg_color=Color(0, 0, 0, 1)
-boot_splash/image="res://resources/imagenes/imagenlogo.png"
+boot_splash/image="res://resources/imagenes/icons_bg/imagenlogo.png"
 config/icon="uid://c0uttipqf8ixw"
 boot_splash/minimum_display_time=10
 

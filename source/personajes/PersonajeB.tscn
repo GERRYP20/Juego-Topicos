@@ -1,10 +1,10 @@
 [gd_scene load_steps=27 format=3 uid="uid://df6wd6lolgna6"]
 
 [ext_resource type="Script" uid="uid://berthmqvslq87" path="res://source/personajes/personaje_b.gd" id="1_u7mrw"]
-[ext_resource type="Texture2D" uid="uid://ba6uxl2itsxob" path="res://resources/imagenes/caminando_abajo.png" id="2_ikkjx"]
-[ext_resource type="Texture2D" uid="uid://cgri1tb6qjxj8" path="res://resources/imagenes/BocetoAtrasPerroFinal.png" id="3_j1yxg"]
-[ext_resource type="Texture2D" uid="uid://npp34vvees1j" path="res://resources/imagenes/perro caminando a la derecha (1).png" id="4_pvatg"]
-[ext_resource type="Texture2D" uid="uid://undmwjlu85xd" path="res://resources/imagenes/perro caminando a la izquierda (2).png" id="5_pnvbs"]
+[ext_resource type="Texture2D" uid="uid://ba6uxl2itsxob" path="res://resources/imagenes/personajes/caminando_abajo.png" id="2_ikkjx"]
+[ext_resource type="Texture2D" uid="uid://cgri1tb6qjxj8" path="res://resources/imagenes/personajes/BocetoAtrasPerroFinal.png" id="3_j1yxg"]
+[ext_resource type="Texture2D" uid="uid://npp34vvees1j" path="res://resources/imagenes/personajes/perro caminando a la derecha (1).png" id="4_pvatg"]
+[ext_resource type="Texture2D" uid="uid://undmwjlu85xd" path="res://resources/imagenes/personajes/perro caminando a la izquierda (2).png" id="5_pnvbs"]
 [ext_resource type="FontFile" uid="uid://ooiqbbq6yn0v" path="res://resources/fonts/Londrina_Solid/LondrinaSolid-Black.ttf" id="6_0fcq7"]
 [ext_resource type="PackedScene" uid="uid://buf8x7n2b465w" path="res://source/componentes/Dialogos/Dialogos.tscn" id="7_0fcq7"]
 

@@ -1,13 +1,13 @@
 [gd_scene load_steps=11 format=3 uid="uid://cgx0yrce7s1mp"]
 
 [ext_resource type="Script" uid="uid://cs20b1b6wlgd2" path="res://source/screens/pantPrincipal/pant_prin.gd" id="1_md2wj"]
-[ext_resource type="Texture2D" uid="uid://de3eff4yumnqe" path="res://resources/imagenes/menu2.png" id="2_ryg0m"]
+[ext_resource type="Texture2D" uid="uid://de3eff4yumnqe" path="res://resources/imagenes/icons_bg/menu2.png" id="2_ryg0m"]
 [ext_resource type="Theme" uid="uid://dxkl17rvghnqm" path="res://resources/themes/informal_theme.tres" id="3_oc8u7"]
 [ext_resource type="Script" uid="uid://dpdxfyqhqwe2f" path="res://source/screens/pantPrincipal/btn_iniciar.gd" id="3_twynu"]
 [ext_resource type="Script" uid="uid://c04j4de34yasy" path="res://source/screens/pantPrincipal/btn_salir.gd" id="4_6dygw"]
 [ext_resource type="FontFile" uid="uid://13fv2426xy8p" path="res://resources/fonts/Londrina_Solid/LondrinaSolid-Light.ttf" id="4_uv3dc"]
 [ext_resource type="AudioStream" uid="uid://u1ghepngxoli" path="res://resources/audios/menu.mp3" id="7_14rqq"]
-[ext_resource type="Texture2D" uid="uid://bn0kohrgxmhrt" path="res://resources/imagenes/logotec.png" id="8_si8du"]
+[ext_resource type="Texture2D" uid="uid://bn0kohrgxmhrt" path="res://resources/imagenes/icons_bg/logotec.png" id="8_si8du"]
 [ext_resource type="Texture2D" uid="uid://c5sf7qayvfnsa" path="res://source/singletone/logotec2.png" id="9_nbxyx"]
 [ext_resource type="PackedScene" uid="uid://buejtgvhkdptv" path="res://source/personajes/PDario.tscn" id="10_c0ovs"]
 

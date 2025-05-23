@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://dmxnnasc74w7k"]
 
-[ext_resource type="Texture2D" uid="uid://cw8bgb4dxbuyt" path="res://resources/imagenes/creditos.jpeg" id="1_2mcs3"]
+[ext_resource type="Texture2D" uid="uid://cw8bgb4dxbuyt" path="res://resources/imagenes/icons_bg/creditos.jpeg" id="1_2mcs3"]
 [ext_resource type="FontFile" uid="uid://b2sjoc032quef" path="res://resources/fonts/Chelsea_Market/ChelseaMarket-Regular.ttf" id="2_b7eil"]
 [ext_resource type="PackedScene" uid="uid://w3c3ix730wnm" path="res://source/personajes/PAna.tscn" id="3_1xybo"]
 [ext_resource type="PackedScene" uid="uid://ckq48q6aa36c8" path="res://source/personajes/PEmma.tscn" id="4_j8wlu"]

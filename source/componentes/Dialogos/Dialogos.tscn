@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://buf8x7n2b465w"]
 
 [ext_resource type="Script" uid="uid://s032mi4dv4dn" path="res://source/componentes/scripts/Interfaz.gd" id="1_ojmmi"]
-[ext_resource type="Texture2D" uid="uid://dt6e8el8n8uus" path="res://resources/imagenes/cuadrotext.png" id="2_2f7em"]
+[ext_resource type="Texture2D" uid="uid://dt6e8el8n8uus" path="res://resources/imagenes/icons_bg/cuadrotext.png" id="2_2f7em"]
 
 [node name="Dialogos" type="Control"]
 layout_mode = 3

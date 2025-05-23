@@ -1,27 +1,28 @@
-[gd_scene load_steps=55 format=4 uid="uid://cest3gxpb5w6c"]
+[gd_scene load_steps=57 format=4 uid="uid://cest3gxpb5w6c"]
 
 [ext_resource type="Script" uid="uid://fcfch2rj60vx" path="res://source/screens/pantJuego/pant_juego.gd" id="1_gga42"]
-[ext_resource type="Texture2D" uid="uid://bssg2aaeulggg" path="res://resources/imagenes/TX Tileset Grass.png" id="2_6sd5f"]
-[ext_resource type="Texture2D" uid="uid://b1xv4fdhqumyw" path="res://resources/imagenes/TX Tileset Stone Ground.png" id="3_iu4qn"]
+[ext_resource type="Texture2D" uid="uid://bssg2aaeulggg" path="res://resources/imagenes/tilesets/TX Tileset Grass.png" id="2_6sd5f"]
+[ext_resource type="Texture2D" uid="uid://b1xv4fdhqumyw" path="res://resources/imagenes/tilesets/TX Tileset Stone Ground.png" id="3_iu4qn"]
 [ext_resource type="Texture2D" uid="uid://b1uwdvo8b2i6m" path="res://resources/imagenes/TX Plant.png" id="3_retb5"]
-[ext_resource type="Texture2D" uid="uid://ydlfd212q1i7" path="res://resources/imagenes/TX Tileset Wall.png" id="4_4gokq"]
+[ext_resource type="Texture2D" uid="uid://ydlfd212q1i7" path="res://resources/imagenes/tilesets/TX Tileset Wall.png" id="4_4gokq"]
 [ext_resource type="PackedScene" uid="uid://df6wd6lolgna6" path="res://source/personajes/PersonajeB.tscn" id="4_5jif8"]
-[ext_resource type="Texture2D" uid="uid://6tufonr0hsxg" path="res://resources/imagenes/carretera.png" id="4_a4k8f"]
+[ext_resource type="Texture2D" uid="uid://6tufonr0hsxg" path="res://resources/imagenes/tilesets/carretera.png" id="4_a4k8f"]
+[ext_resource type="Texture2D" uid="uid://bur0t8t3vknht" path="res://resources/imagenes/tilesets/actionRPGResources/GrassBackground.png" id="4_cyfcb"]
 [ext_resource type="Texture2D" uid="uid://chwvk7spey4o5" path="res://resources/imagenes/UIpackSheet_transparent.png" id="5_h7one"]
-[ext_resource type="Texture2D" uid="uid://cgflegtfocm2a" path="res://resources/imagenes/Pixel car_2020_05_19, Rex Cat.jpg" id="6_fcjbv"]
+[ext_resource type="Texture2D" uid="uid://cgflegtfocm2a" path="res://resources/imagenes/tilesets/Pixel car_2020_05_19, Rex Cat.jpg" id="6_fcjbv"]
 [ext_resource type="PackedScene" uid="uid://bfaclosrqprfa" path="res://source/componentes/Btn_a_menu_principal.tscn" id="7_ydx6h"]
-[ext_resource type="Texture2D" uid="uid://cowbth3htgpod" path="res://resources/imagenes/autos.png" id="9_kdn31"]
-[ext_resource type="Texture2D" uid="uid://rj61sra6hfmo" path="res://resources/imagenes/fuente1.png" id="10_cngcp"]
-[ext_resource type="Texture2D" uid="uid://dw6smprdm6fat" path="res://resources/imagenes/parque.png" id="10_x24dx"]
-[ext_resource type="Texture2D" uid="uid://8pnk1ponyfua" path="res://resources/imagenes/farol.png" id="11_4mbmt"]
-[ext_resource type="Texture2D" uid="uid://d3u7qfdno6s2q" path="res://resources/imagenes/edificio2.png" id="11_icwk8"]
-[ext_resource type="Texture2D" uid="uid://bbyeugcke3gmb" path="res://resources/imagenes/Conservatorio2.png" id="11_r1km7"]
-[ext_resource type="Texture2D" uid="uid://dlfkwrumlw2uk" path="res://resources/imagenes/edificios1.png" id="12_47ln3"]
-[ext_resource type="Texture2D" uid="uid://c7mfcjs6gle0a" path="res://resources/imagenes/edificio3.png" id="14_x507a"]
-[ext_resource type="Texture2D" uid="uid://dy224do6m15kt" path="res://resources/imagenes/edificio4.png" id="15_3teen"]
-[ext_resource type="Texture2D" uid="uid://djfy07u2aemkh" path="res://resources/imagenes/imagen5.png" id="16_3hony"]
-[ext_resource type="Texture2D" uid="uid://3ib1e5d1m2ap" path="res://resources/imagenes/edificio6.png" id="17_ke7gf"]
-[ext_resource type="Texture2D" uid="uid://dx6oauctyxdg3" path="res://resources/imagenes/edificio7.png" id="19_vtgbs"]
+[ext_resource type="Texture2D" uid="uid://cowbth3htgpod" path="res://resources/imagenes/tilesets/autos.png" id="9_kdn31"]
+[ext_resource type="Texture2D" uid="uid://rj61sra6hfmo" path="res://resources/imagenes/tilesets/fuente1.png" id="10_cngcp"]
+[ext_resource type="Texture2D" uid="uid://dw6smprdm6fat" path="res://resources/imagenes/tilesets/parque.png" id="10_x24dx"]
+[ext_resource type="Texture2D" uid="uid://8pnk1ponyfua" path="res://resources/imagenes/tilesets/farol.png" id="11_4mbmt"]
+[ext_resource type="Texture2D" uid="uid://d3u7qfdno6s2q" path="res://resources/imagenes/tilesets/edificio2.png" id="11_icwk8"]
+[ext_resource type="Texture2D" uid="uid://bbyeugcke3gmb" path="res://resources/imagenes/tilesets/Conservatorio2.png" id="11_r1km7"]
+[ext_resource type="Texture2D" uid="uid://dlfkwrumlw2uk" path="res://resources/imagenes/tilesets/edificios1.png" id="12_47ln3"]
+[ext_resource type="Texture2D" uid="uid://c7mfcjs6gle0a" path="res://resources/imagenes/tilesets/edificio3.png" id="14_x507a"]
+[ext_resource type="Texture2D" uid="uid://dy224do6m15kt" path="res://resources/imagenes/tilesets/edificio4.png" id="15_3teen"]
+[ext_resource type="Texture2D" uid="uid://djfy07u2aemkh" path="res://resources/imagenes/tilesets/imagen5.png" id="16_3hony"]
+[ext_resource type="Texture2D" uid="uid://3ib1e5d1m2ap" path="res://resources/imagenes/tilesets/edificio6.png" id="17_ke7gf"]
+[ext_resource type="Texture2D" uid="uid://dx6oauctyxdg3" path="res://resources/imagenes/tilesets/edificio7.png" id="19_vtgbs"]
 [ext_resource type="AudioStream" uid="uid://7fjvwcyl11k0" path="res://resources/audios/PantJuego.mp3" id="20_k1h3x"]
 [ext_resource type="PackedScene" uid="uid://cmttwpfwdaw4o" path="res://source/singletone/Pausa.tscn" id="21_fgy3q"]
 [ext_resource type="PackedScene" uid="uid://brxnaetnpf8r8" path="res://source/componentes/Transicion/Transicion.tscn" id="22_bmghs"]
@@ -147,10 +148,16 @@ texture_region_size = Vector2i(50, 50)
 1:9/0 = 0
 2:9/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nlfb2"]
+texture = ExtResource("4_cyfcb")
+texture_region_size = Vector2i(50, 50)
+0:0/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_qmvaa"]
 tile_size = Vector2i(50, 50)
 sources/0 = SubResource("TileSetAtlasSource_i2qam")
 sources/1 = SubResource("TileSetAtlasSource_kew1k")
+sources/2 = SubResource("TileSetAtlasSource_nlfb2")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tym1g"]
 texture = ExtResource("3_retb5")

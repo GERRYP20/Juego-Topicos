@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://mne4yvalv8a"]
 
 [ext_resource type="Script" uid="uid://bs124q251ipak" path="res://source/screens/pantIntroduccion/pant_intro.gd" id="1_td672"]
-[ext_resource type="Texture2D" uid="uid://dou3yi1iim6ne" path="res://resources/imagenes/company1.png" id="2_anc66"]
+[ext_resource type="Texture2D" uid="uid://dou3yi1iim6ne" path="res://resources/imagenes/icons_bg/company1.png" id="2_anc66"]
 
 [sub_resource type="Theme" id="Theme_sun3f"]
 
