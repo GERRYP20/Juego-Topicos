@@ -1464,8 +1464,7 @@ texture_region_size = Vector2i(40, 33)
 8:46/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_kh8j4"]
-physics_layer_0/collision_layer = 0
-physics_layer_0/collision_mask = 0
+physics_layer_0/collision_layer = 1
 navigation_layer_0/layers = 1
 custom_data_layer_0/name = ""
 custom_data_layer_0/type = 0
@@ -3164,8 +3163,7 @@ texture = ExtResource("6_25fix")
 42:45/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_6igq0"]
-physics_layer_0/collision_layer = 0
-physics_layer_0/collision_mask = 0
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_25fix")
 sources/1 = SubResource("TileSetAtlasSource_6igq0")
 
@@ -3244,7 +3242,13 @@ position = Vector2(979, -223)
 position = Vector2(-137, -188)
 
 [node name="PGuardia" parent="." instance=ExtResource("12_kgtxd")]
-position = Vector2(872, -163)
+position = Vector2(371, -44)
+
+[node name="PGuardia2" parent="." instance=ExtResource("12_kgtxd")]
+position = Vector2(-324, 37)
+
+[node name="PGuardia3" parent="." instance=ExtResource("12_kgtxd")]
+position = Vector2(-53, -272)
 
 [connection signal="recolecta" from="Taco" to="." method="_on_taco_recolecta"]
 [connection signal="recolecta" from="Taco2" to="." method="_on_taco_recolecta"]

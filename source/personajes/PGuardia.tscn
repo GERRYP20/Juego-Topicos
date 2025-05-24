@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://pfjdgqbqcxfg"]
+[gd_scene load_steps=23 format=3 uid="uid://pfjdgqbqcxfg"]
 
 [ext_resource type="Script" uid="uid://b2eorod62ac4g" path="res://source/personajes/p_guardia.gd" id="1_r3x1g"]
 [ext_resource type="Texture2D" uid="uid://cnxjvntjeqsy5" path="res://resources/imagenes/personajes/guardia1 (1).png" id="1_xmxdl"]
@@ -63,6 +63,10 @@ region = Rect2(513, 682, 252, 341)
 [sub_resource type="AtlasTexture" id="AtlasTexture_nopj0"]
 atlas = ExtResource("2_r3x1g")
 region = Rect2(765, 682, 252, 341)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r3x1g"]
+atlas = ExtResource("2_r3x1g")
+region = Rect2(9, 11, 253, 337)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vn4uo"]
 animations = [{
@@ -130,13 +134,21 @@ animations = [{
 "loop": true,
 "name": &"caminando_arriba",
 "speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r3x1g")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_827ig"]
 size = Vector2(34, 63)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xmxdl"]
-radius = 146.086
+radius = 95.0474
 
 [node name="PGuardia" type="CharacterBody2D"]
 collision_layer = 5
@@ -144,14 +156,13 @@ collision_mask = 5
 script = ExtResource("1_r3x1g")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(164, 291)
+position = Vector2(647, 357)
 scale = Vector2(0.198083, 0.218097)
 sprite_frames = SubResource("SpriteFrames_vn4uo")
-animation = &"caminando_arriba"
-frame_progress = 0.750939
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(166, 293.5)
+position = Vector2(651, 353)
 shape = SubResource("RectangleShape2D_827ig")
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -159,7 +170,7 @@ collision_layer = 4
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(167, 284)
+position = Vector2(655, 355)
 shape = SubResource("CircleShape2D_xmxdl")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
