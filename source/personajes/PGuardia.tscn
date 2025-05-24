@@ -1,3 +1,168 @@
-[gd_scene format=3 uid="uid://pfjdgqbqcxfg"]
+[gd_scene load_steps=22 format=3 uid="uid://pfjdgqbqcxfg"]
 
-[node name="PGuardia" type="Node2D"]
+[ext_resource type="Script" uid="uid://b2eorod62ac4g" path="res://source/personajes/p_guardia.gd" id="1_r3x1g"]
+[ext_resource type="Texture2D" uid="uid://cnxjvntjeqsy5" path="res://resources/imagenes/personajes/guardia1 (1).png" id="1_xmxdl"]
+[ext_resource type="Texture2D" uid="uid://bfawhk14m0wph" path="res://resources/imagenes/personajes/guardia2.png" id="2_r3x1g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_axvy8"]
+atlas = ExtResource("1_xmxdl")
+region = Rect2(515, 11, 253, 337)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_txci4"]
+atlas = ExtResource("1_xmxdl")
+region = Rect2(768, 11, 253, 337)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgmam"]
+atlas = ExtResource("1_xmxdl")
+region = Rect2(515, 348, 253, 337)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kmq0e"]
+atlas = ExtResource("1_xmxdl")
+region = Rect2(768, 348, 253, 337)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pffke"]
+atlas = ExtResource("1_xmxdl")
+region = Rect2(270, 0, 261, 355)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h0sg0"]
+atlas = ExtResource("1_xmxdl")
+region = Rect2(9, 351, 264, 340)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bkkmi"]
+atlas = ExtResource("1_xmxdl")
+region = Rect2(273, 351, 264, 340)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gaauk"]
+atlas = ExtResource("2_r3x1g")
+region = Rect2(9, 0, 252, 341)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3yg7i"]
+atlas = ExtResource("2_r3x1g")
+region = Rect2(261, 0, 252, 341)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4j137"]
+atlas = ExtResource("2_r3x1g")
+region = Rect2(513, 0, 252, 341)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iiebd"]
+atlas = ExtResource("2_r3x1g")
+region = Rect2(765, 0, 252, 341)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_umcn2"]
+atlas = ExtResource("2_r3x1g")
+region = Rect2(9, 682, 252, 341)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_78uek"]
+atlas = ExtResource("2_r3x1g")
+region = Rect2(261, 682, 252, 341)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2e7ea"]
+atlas = ExtResource("2_r3x1g")
+region = Rect2(513, 682, 252, 341)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nopj0"]
+atlas = ExtResource("2_r3x1g")
+region = Rect2(765, 682, 252, 341)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vn4uo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_axvy8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_txci4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sgmam")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kmq0e")
+}],
+"loop": true,
+"name": &"camina_derecha",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pffke")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h0sg0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bkkmi")
+}],
+"loop": true,
+"name": &"camina_izquierda",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gaauk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3yg7i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4j137")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iiebd")
+}],
+"loop": true,
+"name": &"caminando_abajo",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_umcn2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_78uek")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2e7ea")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nopj0")
+}],
+"loop": true,
+"name": &"caminando_arriba",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_827ig"]
+size = Vector2(34, 63)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xmxdl"]
+radius = 146.086
+
+[node name="PGuardia" type="CharacterBody2D"]
+collision_layer = 5
+collision_mask = 5
+script = ExtResource("1_r3x1g")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(164, 291)
+scale = Vector2(0.198083, 0.218097)
+sprite_frames = SubResource("SpriteFrames_vn4uo")
+animation = &"caminando_arriba"
+frame_progress = 0.750939
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(166, 293.5)
+shape = SubResource("RectangleShape2D_827ig")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(167, 284)
+shape = SubResource("CircleShape2D_xmxdl")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

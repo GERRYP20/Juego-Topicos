@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://df6wd6lolgna6"]
+[gd_scene load_steps=28 format=3 uid="uid://df6wd6lolgna6"]
 
 [ext_resource type="Script" uid="uid://berthmqvslq87" path="res://source/personajes/personaje_b.gd" id="1_u7mrw"]
 [ext_resource type="Texture2D" uid="uid://ba6uxl2itsxob" path="res://resources/imagenes/personajes/caminando_abajo.png" id="2_ikkjx"]
@@ -134,7 +134,12 @@ size = Vector2(42, 29.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f26b2"]
 size = Vector2(55, 48)
 
-[node name="PersonajeB" type="CharacterBody2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_0fcq7"]
+radius = 132.382
+
+[node name="PersonajeB" type="CharacterBody2D" groups=["Jugador", "interactuar"]]
+collision_layer = 5
+collision_mask = 5
 motion_mode = 1
 script = ExtResource("1_u7mrw")
 
@@ -186,16 +191,21 @@ shape = SubResource("RectangleShape2D_0fcq7")
 visible = false
 
 [node name="TextureRect" parent="Dialogos/CanvasLayer/Label" index="0"]
-layout_mode = 0
 offset_left = -28.0
 offset_top = -10.0
 offset_right = 1236.0
 offset_bottom = 204.0
 
-[node name="Area2D" type="Area2D" parent="." groups=["interactuar"]]
+[node name="Area2D" type="Area2D" parent="." groups=["Jugador", "interactuar"]]
+collision_layer = 4
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(650.5, 354)
 shape = SubResource("RectangleShape2D_f26b2")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(648, 362)
+shape = SubResource("CircleShape2D_0fcq7")
 
 [editable path="Dialogos"]
