@@ -13126,12 +13126,6 @@ offset_top = 653.0
 offset_right = 1209.32
 offset_bottom = 664.68
 
-[node name="CL_Pausa" type="CanvasLayer" parent="."]
-
-[node name="Pause_Screen" parent="CL_Pausa" instance=ExtResource("28_baj8m")]
-offset_left = -4.0
-offset_top = 1.0
-offset_right = -4.0
-offset_bottom = 1.0
+[node name="Pause_Screen" parent="." instance=ExtResource("28_baj8m")]
 
 [editable path="Dialogos"]

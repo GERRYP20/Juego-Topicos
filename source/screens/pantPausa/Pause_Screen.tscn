@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://cy4kw74rvmba2"]
 
 [ext_resource type="Shader" uid="uid://b0cxqs2blqtq" path="res://source/screens/pantPausa/Pause_Screen.gdshader" id="1_jyxmq"]
-[ext_resource type="Script" uid="uid://bwcxtm2fec8uh" path="res://source/screens/pantPausa/pause_screen.gd" id="1_mixfr"]
+[ext_resource type="Script" uid="uid://cqwfen3mv1r2p" path="res://source/screens/pantPausa/control.gd" id="2_q7xiv"]
 [ext_resource type="Theme" uid="uid://dxkl17rvghnqm" path="res://resources/themes/informal_theme.tres" id="3_khepa"]
 [ext_resource type="FontFile" uid="uid://b2sjoc032quef" path="res://resources/fonts/Chelsea_Market/ChelseaMarket-Regular.ttf" id="4_q7xiv"]
 
@@ -9,7 +9,7 @@
 shader = ExtResource("1_jyxmq")
 shader_parameter/lod = 0.0
 
-[sub_resource type="Animation" id="Animation_khepa"]
+[sub_resource type="Animation" id="Animation_q7xiv"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -36,9 +36,9 @@ tracks/1/keys = {
 "values": [Color(1, 1, 1, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_ollb7"]
+[sub_resource type="Animation" id="Animation_khepa"]
 resource_name = "blur"
-length = 0.3
+length = 0.27
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -46,10 +46,10 @@ tracks/0/path = NodePath("ColorRect:material:shader_parameter/lod")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3),
+"times": PackedFloat32Array(0, 0.27),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [0.0, 0.85]
+"values": [0.0, 0.8]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -58,29 +58,29 @@ tracks/1/path = NodePath("Panel:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.3),
+"times": PackedFloat32Array(0, 0.27),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_q7xiv"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ydyof"]
 _data = {
-&"RESET": SubResource("Animation_khepa"),
-&"blur": SubResource("Animation_ollb7")
+&"RESET": SubResource("Animation_q7xiv"),
+&"blur": SubResource("Animation_khepa")
 }
 
-[node name="Pause_Screen" type="Control"]
+[node name="Pause_Screen" type="CanvasLayer"]
 process_mode = 3
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("1_mixfr")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_q7xiv")
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
 material = SubResource("ShaderMaterial_mixfr")
 layout_mode = 1
 anchors_preset = 15
@@ -89,7 +89,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="Control"]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 255.0
@@ -97,7 +97,7 @@ offset_top = 160.0
 offset_right = 1032.0
 offset_bottom = 581.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -114,22 +114,22 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 alignment = 1
 
-[node name="btnContinuar" type="Button" parent="Panel/VBoxContainer"]
+[node name="btnContinuar" type="Button" parent="Control/Panel/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_khepa")
 text = "btnContinuar"
 
-[node name="btnGuardar" type="Button" parent="Panel/VBoxContainer"]
+[node name="btnGuardar" type="Button" parent="Control/Panel/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_khepa")
 text = "btnGuardar"
 
-[node name="btnAMenuPrin" type="Button" parent="Panel/VBoxContainer"]
+[node name="btnAMenuPrin" type="Button" parent="Control/Panel/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_khepa")
 text = "btnAMenuPrin"
 
-[node name="lblPause" type="Label" parent="Panel"]
+[node name="lblPause" type="Label" parent="Control/Panel"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -141,11 +141,11 @@ text = "lblPause"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control"]
 libraries = {
-&"": SubResource("AnimationLibrary_q7xiv")
+&"": SubResource("AnimationLibrary_ydyof")
 }
 
-[connection signal="pressed" from="Panel/VBoxContainer/btnContinuar" to="." method="_on_btn_continuar_pressed"]
-[connection signal="pressed" from="Panel/VBoxContainer/btnGuardar" to="." method="_on_btn_guardar_pressed"]
-[connection signal="pressed" from="Panel/VBoxContainer/btnAMenuPrin" to="." method="_on_btn_a_menu_prin_pressed"]
+[connection signal="pressed" from="Control/Panel/VBoxContainer/btnContinuar" to="Control" method="_on_btn_continuar_pressed"]
+[connection signal="pressed" from="Control/Panel/VBoxContainer/btnGuardar" to="Control" method="_on_btn_guardar_pressed"]
+[connection signal="pressed" from="Control/Panel/VBoxContainer/btnAMenuPrin" to="Control" method="_on_btn_a_menu_prin_pressed"]

@@ -1,6 +1,6 @@
-[gd_scene load_steps=23 format=4 uid="uid://csqmkm1ma0be4"]
+[gd_scene load_steps=24 format=4 uid="uid://csqmkm1ma0be4"]
 
-[ext_resource type="Script" uid="uid://c0php44funuru" path="res://source/screens/edificios_niveles/EBiblioteca/edificio_biblioteca.gd" id="1_5xcrs"]
+[ext_resource type="Script" path="res://source/screens/edificios_niveles/EBiblioteca/edificio_biblioteca.gd" id="1_5xcrs"]
 [ext_resource type="Texture2D" uid="uid://chwvk7spey4o5" path="res://resources/imagenes/UIpackSheet_transparent.png" id="1_edfly"]
 [ext_resource type="Texture2D" uid="uid://cks4num23a5nv" path="res://resources/imagenes/tilesets/biblioteca.png" id="2_jpwrm"]
 [ext_resource type="PackedScene" uid="uid://df6wd6lolgna6" path="res://source/personajes/PersonajeB.tscn" id="2_x75vp"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://pfjdgqbqcxfg" path="res://source/personajes/PGuardia.tscn" id="8_xgmfn"]
 [ext_resource type="AudioStream" uid="uid://dt1ggfkbbcp23" path="res://resources/audios/bilbiotecasoundtrack.mp3" id="9_xgmfn"]
 [ext_resource type="PackedScene" uid="uid://brxnaetnpf8r8" path="res://source/componentes/Transicion/Transicion.tscn" id="12_5wfgd"]
+[ext_resource type="PackedScene" uid="uid://cy4kw74rvmba2" path="res://source/screens/pantPausa/Pause_Screen.tscn" id="13_n6ejo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x75vp"]
 texture = ExtResource("1_edfly")
@@ -17898,6 +17899,8 @@ position = Vector2(1146, -394)
 [node name="Transicion" parent="." instance=ExtResource("12_5wfgd")]
 position = Vector2(-17, 293)
 scene = "res://source/screens/pantJuego/pantJuego.tscn"
+
+[node name="Pause_Screen" parent="." instance=ExtResource("13_n6ejo")]
 
 [connection signal="recolecta" from="tacos/Taco" to="." method="_on_taco_recolecta"]
 [connection signal="recolecta" from="tacos/Taco2" to="." method="_on_taco_recolecta"]

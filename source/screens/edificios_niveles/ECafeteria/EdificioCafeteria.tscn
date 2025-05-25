@@ -8,8 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://dh3kwuot5oud" path="res://resources/imagenes/tilesets/cocina.png" id="6_25fix"]
 [ext_resource type="PackedScene" uid="uid://brxnaetnpf8r8" path="res://source/componentes/Transicion/Transicion.tscn" id="7_6igq0"]
 [ext_resource type="AudioStream" uid="uid://cnjvvyd0l7jlr" path="res://resources/audios/cafeteria.mp3" id="8_r6y31"]
-[ext_resource type="PackedScene" uid="uid://cmttwpfwdaw4o" path="res://source/singletone/Pausa/Pausa.tscn" id="9_5go0w"]
 [ext_resource type="PackedScene" uid="uid://c8ckudmx8bckq" path="res://resources/items/taco.tscn" id="10_kh8j4"]
+[ext_resource type="PackedScene" uid="uid://cy4kw74rvmba2" path="res://source/screens/pantPausa/Pause_Screen.tscn" id="11_xmcv2"]
 [ext_resource type="PackedScene" uid="uid://pfjdgqbqcxfg" path="res://source/personajes/PGuardia.tscn" id="12_kgtxd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r6y31"]
@@ -3197,8 +3197,6 @@ stream = ExtResource("8_r6y31")
 volume_db = -3.736
 autoplay = true
 
-[node name="Pausa" parent="." instance=ExtResource("9_5go0w")]
-
 [node name="Taco" parent="." instance=ExtResource("10_kh8j4")]
 position = Vector2(442, 376)
 
@@ -3233,6 +3231,8 @@ position = Vector2(-324, 37)
 
 [node name="PGuardia3" parent="." instance=ExtResource("12_kgtxd")]
 position = Vector2(-53, -272)
+
+[node name="Pause_Screen" parent="." instance=ExtResource("11_xmcv2")]
 
 [connection signal="recolecta" from="Taco" to="." method="_on_taco_recolecta"]
 [connection signal="recolecta" from="Taco2" to="." method="_on_taco_recolecta"]
