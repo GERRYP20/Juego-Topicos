@@ -1,15 +1,17 @@
 extends Control
-const icoDario=preload("res://resources/imagenes/icons_bg/company1.png")
-func _ready():
-	pass
-func _activar(TEXTO: String, IMAGE: Texture)-> void:
-	$CanvasLayer.show();
-	TEXTO=$CanvasLayer/Label.text;
-	$CanvasLayer/TextureRect.texture=IMAGE;
-	
-func _process(delta):
-	if (GDialogos.dario==true):
-		_activar(GDialogos.npc1.cap1.pd[0],icoDario)
 
-	
-	
+const icoDario = preload("res://resources/imagenes/dario.jpeg")
+
+func _ready():
+	$CanvasLayer.hide()
+
+func _activar(texto: String, imagen: Texture) -> void:
+	$CanvasLayer.show()
+	$CanvasLayer/Label.text = texto
+	$CanvasLayer/TextureRect.texture = imagen
+
+func _process(delta):
+	if GDialogos.dario:
+		_activar(GDialogos.npc1.cap1.pd[0], icoDario)
+	else:
+		$CanvasLayer.hide()

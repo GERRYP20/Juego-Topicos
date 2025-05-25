@@ -3,7 +3,7 @@ var dario:bool=false;
 
 const npc1: Dictionary= {
 	'cap1':{
-		'pd':["Hola"]
+		'pd':["¡HOLA PERRITO! MI NOMBRE ES DARIO"]
 	}
 }
 
