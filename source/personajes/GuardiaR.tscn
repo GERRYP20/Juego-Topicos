@@ -1,7 +1,9 @@
-[gd_scene load_steps=16 format=3 uid="uid://c70vwlvvgkjm"]
+[gd_scene load_steps=20 format=3 uid="uid://c70vwlvvgkjm"]
 
 [ext_resource type="Texture2D" uid="uid://40pb3qdg21dy" path="res://resources/imagenes/personajes/guardiarapido2.png" id="1_lxdlh"]
+[ext_resource type="Script" uid="uid://bsi27h2f3csr0" path="res://source/personajes/guardia_r.gd" id="1_uahmv"]
 [ext_resource type="Texture2D" uid="uid://dvgyi3avfjkmw" path="res://resources/imagenes/personajes/guardiarapido.png" id="2_uahmv"]
+[ext_resource type="AudioStream" uid="uid://bn16tx5m2nfwy" path="res://resources/audios/guardiarojo.mp3" id="4_hegum"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hegum"]
 atlas = ExtResource("1_lxdlh")
@@ -46,6 +48,10 @@ region = Rect2(341, 725, 341, 299)
 [sub_resource type="AtlasTexture" id="AtlasTexture_dko1q"]
 atlas = ExtResource("1_lxdlh")
 region = Rect2(682, 725, 341, 299)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_grwjx"]
+atlas = ExtResource("2_uahmv")
+region = Rect2(0, 0, 512, 432)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_grwjx"]
 animations = [{
@@ -101,21 +107,46 @@ animations = [{
 "loop": true,
 "name": &"caminando_arriba",
 "speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_grwjx")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7h5sr"]
-size = Vector2(68, 97.25)
+size = Vector2(29, 55)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7h5sr"]
+radius = 68.0074
 
 [node name="GuardiaR" type="CharacterBody2D"]
+script = ExtResource("1_uahmv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(194, 284)
-scale = Vector2(0.359756, 0.382857)
+position = Vector2(657.368, 365.044)
+scale = Vector2(0.1655, 0.180759)
 sprite_frames = SubResource("SpriteFrames_grwjx")
-animation = &"caminando_arriba"
-frame = 2
-frame_progress = 0.761254
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(175, 282.375)
+position = Vector2(661, 367)
 shape = SubResource("RectangleShape2D_7h5sr")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(660, 364)
+shape = SubResource("CircleShape2D_7h5sr")
+
+[node name="silbato" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_hegum")
+volume_db = -3.184
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
