@@ -13104,9 +13104,6 @@ scene = "res://source/screens/edificios_niveles/EBiblioteca/EdificioBiblioteca.t
 
 [node name="Dialogos" parent="." instance=ExtResource("28_nlfb2")]
 
-[node name="CanvasLayer" parent="Dialogos" index="0"]
-visible = false
-
 [node name="TextureRect" parent="Dialogos/CanvasLayer" index="1"]
 offset_left = 11.0
 offset_top = 339.0
@@ -13124,11 +13121,5 @@ offset_left = 56.0
 offset_top = 550.0
 offset_right = 1245.0
 offset_bottom = 709.0
-
-[node name="TextureButton" parent="Dialogos/CanvasLayer" index="4"]
-offset_left = 1196.0
-offset_top = 653.0
-offset_right = 1209.32
-offset_bottom = 664.68
 
 [editable path="Dialogos"]

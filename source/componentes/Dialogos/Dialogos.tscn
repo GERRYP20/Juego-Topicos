@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://buf8x7n2b465w"]
+[gd_scene load_steps=5 format=3 uid="uid://buf8x7n2b465w"]
 
 [ext_resource type="Script" uid="uid://s032mi4dv4dn" path="res://source/componentes/scripts/Interfaz.gd" id="1_ojmmi"]
 [ext_resource type="Texture2D" uid="uid://dt6e8el8n8uus" path="res://resources/imagenes/icons_bg/cuadrotext.png" id="2_2f7em"]
 [ext_resource type="FontFile" uid="uid://b2sjoc032quef" path="res://resources/fonts/Chelsea_Market/ChelseaMarket-Regular.ttf" id="3_2f7em"]
+[ext_resource type="Texture2D" uid="uid://dg2630stmske4" path="res://resources/imagenes/jefferson-s-studios-touch-btn-jump.jpg" id="4_gh83e"]
 
 [node name="Dialogos" type="Control"]
 layout_mode = 3
@@ -37,3 +38,15 @@ offset_right = 1231.0
 offset_bottom = 452.0
 theme_override_fonts/font = ExtResource("3_2f7em")
 theme_override_font_sizes/font_size = 50
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_right = 0.031
+anchor_bottom = 0.056
+offset_left = 1155.0
+offset_top = 540.0
+offset_right = 1168.32
+offset_bottom = 551.68
+texture_normal = ExtResource("4_gh83e")
+
+[connection signal="button_down" from="CanvasLayer/TextureButton" to="." method="_on_texture_button_button_down"]
