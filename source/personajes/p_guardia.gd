@@ -10,14 +10,13 @@ func _ready():
 func _physics_process(delta):
 	if area_jugador and area_jugador.is_inside_tree():
 		var direccion = (area_jugador.global_position - global_position).normalized()
-		
-		# Movimiento real hacia el jugador
-		position += direccion * vel * delta
-		
+		velocity = direccion * vel  # ← Asignas aquí
 		_actualizar_animacion(direccion)
-		posicion_ant = position
 	else:
+		velocity = Vector2.ZERO
 		$AnimatedSprite2D.play("idle")
+
+	move_and_slide()  
 
 func _actualizar_animacion(direccion: Vector2):
 	if direccion.length() < 0.01:
@@ -39,6 +38,8 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Jugador"):
 		area_jugador = area
 		print("Área del jugador detectada:", area.name)
+		if not $sorpresa.playing:
+			$sorpresa.play()
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
 	if area == area_jugador:

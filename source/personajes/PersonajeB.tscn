@@ -129,7 +129,7 @@ size = Vector2(36.5, 19)
 size = Vector2(33, 27)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0fcq7"]
-size = Vector2(42, 29.5)
+size = Vector2(58, 45.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f26b2"]
 size = Vector2(55, 48)
@@ -147,7 +147,7 @@ script = ExtResource("1_u7mrw")
 position = Vector2(647, 357)
 scale = Vector2(0.19375, 0.209375)
 sprite_frames = SubResource("SpriteFrames_s1k3q")
-animation = &"caminar_izquierda"
+animation = &"caminar_arriba"
 
 [node name="Camera2D" type="Camera2D" parent="PersonajeB"]
 position = Vector2(-10.3226, 33.4328)
@@ -181,8 +181,7 @@ shape = SubResource("RectangleShape2D_oqyga")
 disabled = true
 
 [node name="CollisionShapeLeft" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(653, 355.25)
+position = Vector2(650, 358.125)
 shape = SubResource("RectangleShape2D_0fcq7")
 
 [node name="Dialogos" parent="." instance=ExtResource("7_0fcq7")]
@@ -201,10 +200,12 @@ collision_layer = 4
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
 position = Vector2(650.5, 354)
 shape = SubResource("RectangleShape2D_f26b2")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+visible = false
 position = Vector2(651, 358)
 shape = SubResource("CircleShape2D_0fcq7")
 

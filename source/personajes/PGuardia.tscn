@@ -1,8 +1,9 @@
-[gd_scene load_steps=23 format=3 uid="uid://pfjdgqbqcxfg"]
+[gd_scene load_steps=24 format=3 uid="uid://pfjdgqbqcxfg"]
 
 [ext_resource type="Script" uid="uid://b2eorod62ac4g" path="res://source/personajes/p_guardia.gd" id="1_r3x1g"]
 [ext_resource type="Texture2D" uid="uid://cnxjvntjeqsy5" path="res://resources/imagenes/personajes/guardia1 (1).png" id="1_xmxdl"]
 [ext_resource type="Texture2D" uid="uid://bfawhk14m0wph" path="res://resources/imagenes/personajes/guardia2.png" id="2_r3x1g"]
+[ext_resource type="AudioStream" uid="uid://djunkum68kskv" path="res://resources/audios/guardia.mp3" id="4_axvy8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_axvy8"]
 atlas = ExtResource("1_xmxdl")
@@ -172,6 +173,10 @@ collision_mask = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(655, 355)
 shape = SubResource("CircleShape2D_xmxdl")
+
+[node name="sorpresa" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_axvy8")
+volume_db = -17.081
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
