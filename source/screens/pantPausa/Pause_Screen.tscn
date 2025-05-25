@@ -1,0 +1,151 @@
+[gd_scene load_steps=9 format=3 uid="uid://cy4kw74rvmba2"]
+
+[ext_resource type="Shader" uid="uid://b0cxqs2blqtq" path="res://source/screens/pantPausa/Pause_Screen.gdshader" id="1_jyxmq"]
+[ext_resource type="Script" uid="uid://bwcxtm2fec8uh" path="res://source/screens/pantPausa/pause_screen.gd" id="1_mixfr"]
+[ext_resource type="Theme" uid="uid://dxkl17rvghnqm" path="res://resources/themes/informal_theme.tres" id="3_khepa"]
+[ext_resource type="FontFile" uid="uid://b2sjoc032quef" path="res://resources/fonts/Chelsea_Market/ChelseaMarket-Regular.ttf" id="4_q7xiv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mixfr"]
+shader = ExtResource("1_jyxmq")
+shader_parameter/lod = 0.0
+
+[sub_resource type="Animation" id="Animation_khepa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/lod")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ollb7"]
+resource_name = "blur"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/lod")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.85]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q7xiv"]
+_data = {
+&"RESET": SubResource("Animation_khepa"),
+&"blur": SubResource("Animation_ollb7")
+}
+
+[node name="Pause_Screen" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mixfr")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_mixfr")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 255.0
+offset_top = 160.0
+offset_right = 1032.0
+offset_bottom = 581.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -107.5
+offset_top = -73.0
+offset_right = 107.5
+offset_bottom = 73.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="btnContinuar" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_khepa")
+text = "btnContinuar"
+
+[node name="btnGuardar" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_khepa")
+text = "btnGuardar"
+
+[node name="btnAMenuPrin" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_khepa")
+text = "btnAMenuPrin"
+
+[node name="lblPause" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 160.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_q7xiv")
+theme_override_font_sizes/font_size = 36
+text = "lblPause"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_q7xiv")
+}
+
+[connection signal="pressed" from="Panel/VBoxContainer/btnContinuar" to="." method="_on_btn_continuar_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/btnGuardar" to="." method="_on_btn_guardar_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/btnAMenuPrin" to="." method="_on_btn_a_menu_prin_pressed"]

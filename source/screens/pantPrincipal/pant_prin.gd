@@ -21,6 +21,7 @@ func button_disabling(v:bool):
 
 func _on_btn_iniciar_pressed() -> void:
 	CRC_T.cambia_escena("res://source/screens/pantJuego/pantJuego.tscn")
+	
 
 
 func _on_button_pressed() -> void:

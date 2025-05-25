@@ -10,9 +10,11 @@ class_name CapaTactil extends CanvasLayer
 
 func _ready():
 	layer = -6
+	hide()
 
 func toggle_visible():
 	layer= 1 if capa_visible else -5
+	show() if capa_visible else hide()
 
 func activa_capa_tactil():
 	if GLOBAL.touch_controls:

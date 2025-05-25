@@ -59,3 +59,7 @@ func _set_collision(direction: String):
 	$CollisionShapeDown.disabled = (direction != "move_down")
 	$CollisionShapeLeft.disabled = (direction != "move_left")
 	$CollisionShapeRight.disabled = (direction != "move_right")
+
+
+func _on_btn_pausa_pressed() -> void:
+	Input.action_press("pausa")

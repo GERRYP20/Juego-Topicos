@@ -24,9 +24,9 @@
 [ext_resource type="Texture2D" uid="uid://3ib1e5d1m2ap" path="res://resources/imagenes/tilesets/edificio6.png" id="17_ke7gf"]
 [ext_resource type="Texture2D" uid="uid://dx6oauctyxdg3" path="res://resources/imagenes/tilesets/edificio7.png" id="19_vtgbs"]
 [ext_resource type="AudioStream" uid="uid://7fjvwcyl11k0" path="res://resources/audios/PantJuego.mp3" id="20_k1h3x"]
-[ext_resource type="PackedScene" uid="uid://cmttwpfwdaw4o" path="res://source/singletone/Pausa/Pausa.tscn" id="21_fgy3q"]
 [ext_resource type="PackedScene" uid="uid://brxnaetnpf8r8" path="res://source/componentes/Transicion/Transicion.tscn" id="22_bmghs"]
 [ext_resource type="PackedScene" uid="uid://buejtgvhkdptv" path="res://source/personajes/PDario.tscn" id="23_ewces"]
+[ext_resource type="PackedScene" uid="uid://cy4kw74rvmba2" path="res://source/screens/pantPausa/Pause_Screen.tscn" id="28_baj8m"]
 [ext_resource type="PackedScene" uid="uid://buf8x7n2b465w" path="res://source/componentes/Dialogos/Dialogos.tscn" id="28_nlfb2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i2qam"]
@@ -13079,8 +13079,6 @@ stream = ExtResource("20_k1h3x")
 volume_db = -4.685
 autoplay = true
 
-[node name="Pausa" parent="." instance=ExtResource("21_fgy3q")]
-
 [node name="TransicionC" parent="." instance=ExtResource("22_bmghs")]
 position = Vector2(-878, 248)
 scene = "res://source/screens/edificios_niveles/ECafeteria/EdificioCafeteria.tscn"
@@ -13130,5 +13128,13 @@ offset_left = 1196.0
 offset_top = 653.0
 offset_right = 1209.32
 offset_bottom = 664.68
+
+[node name="CL_Pausa" type="CanvasLayer" parent="."]
+
+[node name="Pause_Screen" parent="CL_Pausa" instance=ExtResource("28_baj8m")]
+offset_left = -4.0
+offset_top = 1.0
+offset_right = -4.0
+offset_bottom = 1.0
 
 [editable path="Dialogos"]

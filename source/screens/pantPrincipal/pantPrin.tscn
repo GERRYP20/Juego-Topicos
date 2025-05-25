@@ -25,33 +25,39 @@ expand_mode = 1
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 offset_left = 319.0
 offset_top = 594.0
-offset_right = 996.0
+offset_right = 1065.0
 offset_bottom = 634.0
 alignment = 1
 
-[node name="BtnConfig" type="Button" parent="HBoxContainer"]
-layout_mode = 2
-text = "BtnConfig"
-
 [node name="BtnIniciar" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+theme = ExtResource("3_oc8u7")
 text = "BtnIniciar"
 script = ExtResource("3_twynu")
 
 [node name="BtnContinuar" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+theme = ExtResource("3_oc8u7")
 text = "BtnContinuar"
+
+[node name="BtnConfig" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_oc8u7")
+text = "BtnConfig"
 
 [node name="BtnCreditos" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+theme = ExtResource("3_oc8u7")
 text = "BtnCreditos"
 
 [node name="BtnComoJugar" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+theme = ExtResource("3_oc8u7")
 text = "BtnComoJugar"
 
 [node name="BtnSalir" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+theme = ExtResource("3_oc8u7")
 text = "BtnSalir"
 script = ExtResource("4_6dygw")
 
@@ -89,8 +95,8 @@ expand_mode = 1
 [node name="PDario" parent="." instance=ExtResource("10_c0ovs")]
 position = Vector2(1063, 420)
 
-[connection signal="pressed" from="HBoxContainer/BtnConfig" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/BtnIniciar" to="." method="_on_btn_iniciar_pressed"]
 [connection signal="pressed" from="HBoxContainer/BtnContinuar" to="." method="_on_btn_continuar_pressed"]
+[connection signal="pressed" from="HBoxContainer/BtnConfig" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/BtnCreditos" to="." method="_on_btn_creditos_pressed"]
 [connection signal="pressed" from="HBoxContainer/BtnSalir" to="." method="_on_btn_salir_pressed"]

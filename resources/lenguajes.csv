@@ -10,3 +10,7 @@ LblConfig,Configuración,Settings
 LblCambiar,Cambiar idioma,Change language
 BtnGuardar,Guardar,Save
 BtnSalir,Salir,Exit
+lblPause,Pausa,Pause
+btnContinuar,Continuar,Continue
+btnGuardar,Guardar partida,Save game
+btnAMenuPrin,Menú principal,Main menu
