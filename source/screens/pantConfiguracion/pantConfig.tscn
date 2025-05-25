@@ -67,11 +67,20 @@ text = "LblCambiar"
 [node name="BtnGuardar" type="Button" parent="Panel"]
 layout_mode = 0
 offset_left = 556.0
-offset_top = 439.0
+offset_top = 399.0
 offset_right = 725.0
-offset_bottom = 489.0
+offset_bottom = 449.0
 theme = ExtResource("4_30887")
 text = "BtnGuardar"
+
+[node name="BtnTouch" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 558.0
+offset_top = 471.0
+offset_right = 724.0
+offset_bottom = 520.0
+theme = ExtResource("4_30887")
+text = "BtnTouch"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_0fr1p")
@@ -79,3 +88,4 @@ autoplay = true
 
 [connection signal="pressed" from="Panel/BtnCambiarIdioma" to="." method="_on_btn_cambiar_idioma_pressed"]
 [connection signal="pressed" from="Panel/BtnGuardar" to="." method="_on_btn_guardar_pressed"]
+[connection signal="pressed" from="Panel/BtnTouch" to="." method="_on_btn_touch_pressed"]

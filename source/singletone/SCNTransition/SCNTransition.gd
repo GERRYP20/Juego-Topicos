@@ -10,7 +10,7 @@ func _ready() -> void:
 	
 
 func cambia_escena(path:String):
-	layer = 1
+	layer = 2
 	$ANPFade.play("fade_in")
 	await($ANPFade.animation_finished)
 	get_tree().change_scene_to_file(path)
@@ -20,7 +20,7 @@ func cambia_escena(path:String):
 
 
 func cambia_escena_packed(scene:PackedScene):
-	layer=1
+	layer=2
 	$ANPFade.play("fade_in")
 	await($ANPFade.animation_finished)
 	get_tree().change_scene_to_packed(scene)
