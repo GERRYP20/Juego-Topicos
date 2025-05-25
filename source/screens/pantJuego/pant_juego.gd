@@ -3,7 +3,8 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	CAPA_TACTIL.activa_capa_tactil()
+	if GLOBAL.touch_controls:
+		CAPA_TACTIL.activa_capa_tactil()
 	pass # Replace with function body.
 
 
