@@ -9,6 +9,7 @@ func _process(delta: float) -> void:
 	pass
 
 func _ready():
+	$Panel.visibility_layer=2
 	await get_tree().process_frame  # Espera un frame para estabilidad
 	await get_tree().create_timer(5.0).timeout  # Espera 2 segundos
 	SCN_T.cambia_escena("res://source/screens/pantPrincipal/pantPrin.tscn")

@@ -11,4 +11,5 @@ func _on_pressed():
 
 
 func a_menu_prin():
+	CAPA_TACTIL.desactiva_capa_tactil()
 	SCN_T.cambia_escena("res://source/screens/pantPrincipal/pantPrin.tscn")

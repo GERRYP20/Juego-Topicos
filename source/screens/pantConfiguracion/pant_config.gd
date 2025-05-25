@@ -34,3 +34,12 @@ func _on_btn_cambiar_idioma_pressed() -> void:
 
 func _on_btn_guardar_pressed() -> void:
 	CONFIG_FILE.save_full_config()
+
+func get_tactile_value()->String:
+	return "Tactil: ON" if GLOBAL.touch_controls else "Tactil: OFF"
+
+func _on_btn_touch_pressed() -> void:
+	GLOBAL.touch_controls=!GLOBAL.touch_controls
+	print("ON Touch" if GLOBAL.touch_controls else "OFF Touch")
+	$Panel/BtnTouch.text = get_tactile_value()
+	CONFIG_FILE.save_touch_setting("touch_controls",GLOBAL.touch_controls)
