@@ -1,6 +1,6 @@
 [gd_scene load_steps=24 format=4 uid="uid://csqmkm1ma0be4"]
 
-[ext_resource type="Script" path="res://source/screens/edificios_niveles/EBiblioteca/edificio_biblioteca.gd" id="1_5xcrs"]
+[ext_resource type="Script" uid="uid://c0php44funuru" path="res://source/screens/edificios_niveles/EBiblioteca/edificio_biblioteca.gd" id="1_5xcrs"]
 [ext_resource type="Texture2D" uid="uid://chwvk7spey4o5" path="res://resources/imagenes/UIpackSheet_transparent.png" id="1_edfly"]
 [ext_resource type="Texture2D" uid="uid://cks4num23a5nv" path="res://resources/imagenes/tilesets/biblioteca.png" id="2_jpwrm"]
 [ext_resource type="PackedScene" uid="uid://df6wd6lolgna6" path="res://source/personajes/PersonajeB.tscn" id="2_x75vp"]
