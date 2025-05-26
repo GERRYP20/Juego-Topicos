@@ -169,8 +169,8 @@ position = Vector2(650, 358.125)
 shape = SubResource("RectangleShape2D_0fcq7")
 
 [node name="Area2D" type="Area2D" parent="." groups=["Jugador", "interactuar"]]
-collision_layer = 20
-collision_mask = 20
+collision_layer = 28
+collision_mask = 28
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 visible = false

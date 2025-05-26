@@ -2,7 +2,8 @@ class_name Personaje
 extends CharacterBody2D
 
 @onready var per = $PersonajeB
-var speed: int = 250
+var base_speed: int = 250
+var run_multiplier: float = 1.5  # Aumento de velocidad al correr
 
 func _process(delta):
 	var direction := Vector2.ZERO
@@ -19,7 +20,13 @@ func _process(delta):
 
 	if direction != Vector2.ZERO:
 		direction = direction.normalized()
-		velocity = direction * speed
+		
+		# Verifica si Shift está presionado para aumentar la velocidad
+		var current_speed = base_speed
+		if Input.is_key_pressed(KEY_SHIFT):
+			current_speed *= run_multiplier
+
+		velocity = direction * current_speed
 		play_animation(direction)
 		_set_collision_from_vector(direction)  # Activar/desactivar colisiones según dirección
 	else:

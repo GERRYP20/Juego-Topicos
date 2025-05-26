@@ -5096,9 +5096,13 @@ texture = ExtResource("10_cngcp")
 margins = Vector2i(7, 0)
 texture_region_size = Vector2i(44, 47)
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0.564472, -6.77369, 22, -12.9829, 22, 22, -2.82237, 22)
 1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-22, -11.2895, -4.51579, -4.51579, 0, 22, -22, 22)
 0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6.77369, -22, 22, -22, 22, 22, 3.95132, 22, -14.1118, 5.08027)
 1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-22, -22, 5.08027, -22, 11.8539, 2.82237, 3.38684, 15.8053, -22, 22)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4mbmt"]
 texture = ExtResource("10_x24dx")
@@ -13102,24 +13106,27 @@ scene = "res://source/screens/edificios_niveles/EBiblioteca/EdificioBiblioteca.t
 
 [node name="Dialogos" parent="." instance=ExtResource("28_nlfb2")]
 
-[node name="TextureRect" parent="Dialogos/CanvasLayer" index="1"]
-offset_left = 6.0
-offset_top = 109.0
-offset_right = 118.0
-offset_bottom = 219.0
-expand_mode = 1
+[node name="CanvasLayer" parent="Dialogos" index="0"]
+visible = false
 
-[node name="TextureRect2" parent="Dialogos/CanvasLayer" index="2"]
+[node name="TextureRect2" parent="Dialogos/CanvasLayer" index="1"]
 offset_left = 19.0
 offset_top = 3.0
 offset_right = 1264.0
 offset_bottom = 168.0
 
-[node name="Label" parent="Dialogos/CanvasLayer" index="3"]
+[node name="Label" parent="Dialogos/CanvasLayer" index="2"]
 offset_left = 32.0
 offset_top = 26.0
 offset_right = 1221.0
 offset_bottom = 146.0
+
+[node name="TextureRect" parent="Dialogos/CanvasLayer" index="3"]
+offset_left = 6.0
+offset_top = 109.0
+offset_right = 118.0
+offset_bottom = 219.0
+expand_mode = 1
 
 [node name="TextureButton" parent="Dialogos/CanvasLayer" index="4"]
 offset_left = 1177.0
