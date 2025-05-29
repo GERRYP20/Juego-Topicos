@@ -67,7 +67,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"camina_derecha",
-"speed": 9.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -81,7 +81,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"camina_izquierda",
-"speed": 9.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -92,7 +92,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"caminando_abajo",
-"speed": 10.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -106,7 +106,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"caminando_arriba",
-"speed": 9.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -130,7 +130,8 @@ script = ExtResource("1_uahmv")
 position = Vector2(657.368, 365.044)
 scale = Vector2(0.1655, 0.180759)
 sprite_frames = SubResource("SpriteFrames_grwjx")
-animation = &"idle"
+animation = &"caminando_arriba"
+frame_progress = 0.278527
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(661, 367)

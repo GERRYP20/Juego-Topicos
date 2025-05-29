@@ -45,3 +45,9 @@ func _on_area_2d_area_exited(area: Area2D) -> void:
 	if area == area_jugador:
 		area_jugador = null
 		print("Área del jugador salió")
+
+
+func _on_area_2d_2_area_entered(area: Area2D) -> void:
+	if area.is_in_group("Jugador"):
+		CRC_T.cambia_escena("res://source/screens/pantJuego/pantJuego.tscn")
+	pass 

@@ -301,8 +301,11 @@ texture_region_size = Vector2i(18, 18)
 19:8/0 = 0
 20:8/0 = 0
 21:8/0 = 0
+21:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 22:8/0 = 0
+22:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 23:8/0 = 0
+23:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 24:8/0 = 0
 25:8/0 = 0
 26:8/0 = 0
@@ -334,8 +337,11 @@ texture_region_size = Vector2i(18, 18)
 19:9/0 = 0
 20:9/0 = 0
 21:9/0 = 0
+21:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 22:9/0 = 0
+22:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 23:9/0 = 0
+23:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 24:9/0 = 0
 25:9/0 = 0
 26:9/0 = 0
@@ -3198,7 +3204,7 @@ volume_db = -3.736
 autoplay = true
 
 [node name="Taco" parent="." instance=ExtResource("10_kh8j4")]
-position = Vector2(442, 376)
+position = Vector2(468, 381)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -3223,16 +3229,33 @@ position = Vector2(979, -223)
 [node name="Taco8" parent="." instance=ExtResource("10_kh8j4")]
 position = Vector2(-137, -188)
 
-[node name="PGuardia" parent="." instance=ExtResource("12_kgtxd")]
-position = Vector2(371, -44)
+[node name="Taco9" parent="." instance=ExtResource("10_kh8j4")]
+position = Vector2(1106, 317)
 
-[node name="PGuardia2" parent="." instance=ExtResource("12_kgtxd")]
-position = Vector2(-324, 37)
+[node name="Taco10" parent="." instance=ExtResource("10_kh8j4")]
+position = Vector2(-26, -34)
 
-[node name="PGuardia3" parent="." instance=ExtResource("12_kgtxd")]
-position = Vector2(-53, -272)
+[node name="Taco11" parent="." instance=ExtResource("10_kh8j4")]
+position = Vector2(55, 651)
 
 [node name="Pause_Screen" parent="." instance=ExtResource("11_xmcv2")]
+
+[node name="Node" type="Node" parent="."]
+
+[node name="PGuardia" parent="Node" instance=ExtResource("12_kgtxd")]
+position = Vector2(14, 2)
+
+[node name="PGuardia2" parent="Node" instance=ExtResource("12_kgtxd")]
+position = Vector2(412, -288)
+
+[node name="PGuardia3" parent="Node" instance=ExtResource("12_kgtxd")]
+position = Vector2(-535, 110)
+
+[node name="PGuardia4" parent="Node" instance=ExtResource("12_kgtxd")]
+position = Vector2(583, 282)
+
+[node name="PGuardia5" parent="Node" instance=ExtResource("12_kgtxd")]
+position = Vector2(33, -494)
 
 [connection signal="recolecta" from="Taco" to="." method="_on_taco_recolecta"]
 [connection signal="recolecta" from="Taco2" to="." method="_on_taco_recolecta"]
@@ -3242,3 +3265,6 @@ position = Vector2(-53, -272)
 [connection signal="recolecta" from="Taco6" to="." method="_on_taco_recolecta"]
 [connection signal="recolecta" from="Taco7" to="." method="_on_taco_recolecta"]
 [connection signal="recolecta" from="Taco8" to="." method="_on_taco_recolecta"]
+[connection signal="recolecta" from="Taco9" to="." method="_on_taco_recolecta"]
+[connection signal="recolecta" from="Taco10" to="." method="_on_taco_recolecta"]
+[connection signal="recolecta" from="Taco11" to="." method="_on_taco_recolecta"]
