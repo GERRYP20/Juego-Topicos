@@ -1,9 +1,10 @@
-[gd_scene load_steps=25 format=3 uid="uid://pfjdgqbqcxfg"]
+[gd_scene load_steps=26 format=3 uid="uid://pfjdgqbqcxfg"]
 
 [ext_resource type="Script" uid="uid://b2eorod62ac4g" path="res://source/personajes/p_guardia.gd" id="1_r3x1g"]
 [ext_resource type="Texture2D" uid="uid://cnxjvntjeqsy5" path="res://resources/imagenes/personajes/guardia1 (1).png" id="1_xmxdl"]
 [ext_resource type="Texture2D" uid="uid://bfawhk14m0wph" path="res://resources/imagenes/personajes/guardia2.png" id="2_r3x1g"]
 [ext_resource type="AudioStream" uid="uid://djunkum68kskv" path="res://resources/audios/guardia.mp3" id="4_axvy8"]
+[ext_resource type="AudioStream" uid="uid://cdybqeqgeox86" path="res://resources/audios/lose.mp3" id="5_txci4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_axvy8"]
 atlas = ExtResource("1_xmxdl")
@@ -190,6 +191,10 @@ collision_mask = 32
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 position = Vector2(649.5, 360.75)
 shape = SubResource("RectangleShape2D_axvy8")
+
+[node name="loser" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_txci4")
+volume_db = -3.495
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

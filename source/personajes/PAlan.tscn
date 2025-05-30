@@ -1,0 +1,57 @@
+[gd_scene load_steps=8 format=3 uid="uid://ctaehxhjpfgke"]
+
+[ext_resource type="Script" uid="uid://nhvom28dqwbj" path="res://source/personajes/p_alan.gd" id="1_e4gyt"]
+[ext_resource type="Texture2D" uid="uid://b2f3co05ljf53" path="res://resources/imagenes/personajes/alan (1).png" id="2_nmqly"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uwd1f"]
+atlas = ExtResource("2_nmqly")
+region = Rect2(0, 0, 500, 750)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sycd6"]
+atlas = ExtResource("2_nmqly")
+region = Rect2(500, 0, 500, 750)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ql1v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uwd1f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sycd6")
+}],
+"loop": true,
+"name": &"nada",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6i3c4"]
+size = Vector2(30, 85)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rayde"]
+size = Vector2(27, 83)
+
+[node name="PAlan" type="CharacterBody2D" groups=["interactuar"]]
+script = ExtResource("1_e4gyt")
+
+[node name="PAlan" type="AnimatedSprite2D" parent="."]
+position = Vector2(657, 347)
+scale = Vector2(0.143, 0.140667)
+sprite_frames = SubResource("SpriteFrames_8ql1v")
+animation = &"nada"
+frame_progress = 0.725746
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(658, 352.5)
+shape = SubResource("RectangleShape2D_6i3c4")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(658, 354)
+shape = SubResource("RectangleShape2D_rayde")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

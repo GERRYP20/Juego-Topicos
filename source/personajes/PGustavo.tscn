@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://dcckcp12ahmwt"]
+
+[ext_resource type="Script" uid="uid://cp5xy4g4b5yjg" path="res://source/personajes/p_gustavo.gd" id="1_fxgqi"]
+[ext_resource type="Texture2D" uid="uid://cdmro2vabe88r" path="res://resources/imagenes/personajes/gustavo.png" id="2_8p8op"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mwk21"]
+atlas = ExtResource("2_8p8op")
+region = Rect2(0, 0, 375, 375)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ui6dv"]
+atlas = ExtResource("2_8p8op")
+region = Rect2(375, 0, 375, 375)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nqift"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mwk21")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ui6dv")
+}],
+"loop": true,
+"name": &"nada",
+"speed": 9.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hrnow"]
+size = Vector2(35, 83)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6amyo"]
+size = Vector2(38, 82)
+
+[node name="PGustavo" type="CharacterBody2D" groups=["interactuar"]]
+script = ExtResource("1_fxgqi")
+
+[node name="PGustavo" type="AnimatedSprite2D" parent="."]
+position = Vector2(652, 372)
+scale = Vector2(0.218667, 0.213333)
+sprite_frames = SubResource("SpriteFrames_nqift")
+animation = &"nada"
+frame_progress = 0.691108
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(651.5, 372.5)
+shape = SubResource("RectangleShape2D_hrnow")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, 1)
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(652, 371)
+shape = SubResource("RectangleShape2D_6amyo")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

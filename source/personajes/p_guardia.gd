@@ -50,4 +50,5 @@ func _on_area_2d_area_exited(area: Area2D) -> void:
 func _on_area_2d_2_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Jugador"):
 		CRC_T.cambia_escena("res://source/screens/pantJuego/pantJuego.tscn")
+		$loser.play()
 	pass 
