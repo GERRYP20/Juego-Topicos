@@ -1,10 +1,12 @@
-[gd_scene load_steps=26 format=3 uid="uid://df6wd6lolgna6"]
+[gd_scene load_steps=29 format=3 uid="uid://df6wd6lolgna6"]
 
 [ext_resource type="Script" uid="uid://berthmqvslq87" path="res://source/personajes/personaje_b.gd" id="1_u7mrw"]
 [ext_resource type="Texture2D" uid="uid://ba6uxl2itsxob" path="res://resources/imagenes/personajes/caminando_abajo.png" id="2_ikkjx"]
 [ext_resource type="Texture2D" uid="uid://cgri1tb6qjxj8" path="res://resources/imagenes/personajes/BocetoAtrasPerroFinal.png" id="3_j1yxg"]
 [ext_resource type="Texture2D" uid="uid://npp34vvees1j" path="res://resources/imagenes/personajes/perro caminando a la derecha (1).png" id="4_pvatg"]
 [ext_resource type="Texture2D" uid="uid://undmwjlu85xd" path="res://resources/imagenes/personajes/perro caminando a la izquierda (2).png" id="5_pnvbs"]
+[ext_resource type="PackedScene" uid="uid://c8ckudmx8bckq" path="res://resources/items/taco.tscn" id="6_oqyga"]
+[ext_resource type="FontFile" uid="uid://b2sjoc032quef" path="res://resources/fonts/Chelsea_Market/ChelseaMarket-Regular.ttf" id="7_0fcq7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x81yx"]
 atlas = ExtResource("2_ikkjx")
@@ -134,9 +136,12 @@ radius = 119.34
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x5tvq"]
 size = Vector2(31, 52)
 
-[node name="PersonajeB" type="CharacterBody2D" groups=["Jugador", "interactuar"]]
-collision_layer = 37
-collision_mask = 37
+[sub_resource type="CircleShape2D" id="CircleShape2D_f26b2"]
+radius = 22.3607
+
+[node name="PersonajeB" type="CharacterBody2D" groups=["Jugador", "interactuar", "items"]]
+collision_layer = 165
+collision_mask = 165
 motion_mode = 1
 script = ExtResource("1_u7mrw")
 
@@ -191,3 +196,26 @@ collision_mask = 32
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" groups=["Jugador"]]
 position = Vector2(646.5, 354)
 shape = SubResource("RectangleShape2D_x5tvq")
+
+[node name="Taco" parent="." instance=ExtResource("6_oqyga")]
+position = Vector2(-83, -65)
+
+[node name="Labeltacos" type="Label" parent="."]
+offset_left = 163.0
+offset_top = 35.0
+offset_right = 231.0
+offset_bottom = 77.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_0fcq7")
+theme_override_font_sizes/font_size = 30
+text = ": 0"
+
+[node name="Area2D3" type="Area2D" parent="."]
+collision_layer = 128
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
+position = Vector2(646, 359)
+shape = SubResource("CircleShape2D_f26b2")
+
+[connection signal="area_entered" from="Area2D3" to="." method="_on_area_2d_3_area_entered"]

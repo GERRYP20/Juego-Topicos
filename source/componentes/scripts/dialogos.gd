@@ -31,7 +31,7 @@ const npc3: Dictionary = {
 	'cap1': {
 		'pd': [
 			"Alan: El tec es mi casa",
-			"Alan: ¿Mi hobbit?",
+			"Alan: ¿Mi pasatiempo?",
 			"Alan: Estudiar, sin duda alguna"
 		]
 	}

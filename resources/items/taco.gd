@@ -2,7 +2,8 @@ extends Area2D
 signal recolecta
 
 @onready var sprite = $AnimatedSprite2D
-@onready var sonido = $comer  # ← Nodo de sonido
+@onready var sonido = $comer  # ← Nodo de sonid
+
 
 var velocity = Vector2.ZERO
 

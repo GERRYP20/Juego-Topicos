@@ -17929,4 +17929,5 @@ scene = "res://source/screens/pantJuego/pantJuego.tscn"
 [connection signal="recolecta" from="tacos/Taco9" to="." method="_on_taco_recolecta"]
 [connection signal="recolecta" from="tacos/Taco10" to="." method="_on_taco_recolecta"]
 
+[editable path="PersonajeB"]
 [editable path="Node2D/PGuardia"]

@@ -36,7 +36,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vkvn8"]
 size = Vector2(32, 18)
 
-[node name="Taco" type="Area2D"]
+[node name="Taco" type="Area2D" groups=["items"]]
+collision_layer = 128
+collision_mask = 128
 script = ExtResource("1_p8syq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

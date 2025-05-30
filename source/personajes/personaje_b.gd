@@ -4,7 +4,7 @@ extends CharacterBody2D
 @onready var per = $PersonajeB
 var base_speed: int = 250
 var run_multiplier: float = 1.5  # Aumento de velocidad al correr
-
+var contador : int=0
 func _process(delta):
 	var direction := Vector2.ZERO
 
@@ -70,3 +70,10 @@ func _set_collision(direction: String):
 
 func _on_btn_pausa_pressed() -> void:
 	Input.action_press("pausa")
+
+
+func _on_area_2d_3_area_entered(area: Area2D) -> void:
+	if area.is_in_group("items"):
+		contador += 1  # Aumenta el contador
+		$Labeltacos.text = ": " + str(contador)  # Actualiza el texto del label
+	pass # Replace with function body.
